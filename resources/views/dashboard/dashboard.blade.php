@@ -30,9 +30,10 @@
                     <span class="nav-text">Data Master </span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="{{ route('blog') }}">berita</a></li>
+                    <li><a href="{{ route('blog') }}">Berita</a></li>
                     <li><a href="{{ route('team') }}">Team</a></li>
-                    <li><a href="">Jadwal Kegiatan</a></li>
+                    <li><a href="{{ route('photo') }}">Photo</a></li>
+                    <li><a href="{{ route('about.index') }}">About</a></li>
                 </ul>
             </li>
          

@@ -161,15 +161,16 @@
 
         <!--Start About One-->
         <div class="about-one">
-            <div class="about-one__big-title">translo </div>
+            <div class="about-one__big-title">Mata Raung </div>
             <div class="container">
+                @foreach($abouts as $about)
                 <div class="row">
                     <div class="col-xl-5">
                         <div class="about-one__img clearfix">
-                            <div class="shape1 float-bob-x"><img src="{{ asset('assets/img/shape/about-v1-shape1.png') }}" alt="">
+                            <div class="shape1 float-bob-x"><img src="{{ asset('asset/img/shape/about-v1-shape1.png') }}" alt="">
                             </div>
                             <div class="inner clearfix">
-                                <img class="float-bob-y" src="{{ asset('assets/img/about/about-one__img1.jpg') }}" alt="">
+                                <img class="float-bob-y" src="{{ asset('storage/about/' . $about->image1) }}" alt="">
                             </div>
                             <div class="btn-box">
                                 <div class="round-text">
@@ -189,15 +190,11 @@
                                     <div class="sub-title">
                                         <h5><span class="icon-right-arrow-1"></span> About Company</h5>
                                     </div>
-                                    <h2>Digital & Trusted Transport <br>
-                                        Logistic Company</h2>
+                                    <h2>{{ $about->judul1 }}</h2>
                                 </div>
 
                                 <div class="text">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod of
-                                        tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspend
-                                        ultrices
-                                        gravida risus commodo viverra maecenas.</p>
+                                    <p>{!! $about->deskripsi1 !!}</p>
                                 </div>
                             </div>
 
@@ -209,9 +206,8 @@
                                                 <img src="{{ asset('assets/img/icon/about/worldwide-delivery.png') }}" alt="#">
                                             </div>
                                             <div class="text-box">
-                                                <h4>Fast Worldwide Delivery</h4>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                    eiusmod of tempor incididunt ut labore et dolore.</p>
+                                                <h4>Vision</h4>
+                                                <p>"{{ $about->visi }}"</p>
                                             </div>
                                         </div>
                                     </li>
@@ -222,9 +218,8 @@
                                                 <img src="{{ asset('assets/img/icon/about/secure-delivery.png') }}" alt="#">
                                             </div>
                                             <div class="text-box">
-                                                <h4>Safe And Secure Delivery</h4>
-                                                <p>There are many variations of passages of Lorem Ipsum available but
-                                                    the majority have suffered alteration in some form,</p>
+                                                <h4>Mission</h4>
+                                                <p>"{{ $about->misi }}"</p>
                                             </div>
                                         </div>
                                     </li>
@@ -233,6 +228,7 @@
                         </div>
                     </div>
                 </div>
+                @endforeach
             </div>
         </div>
         <!--End About One-->
@@ -1796,174 +1792,94 @@
         </section>
         <!-- End Blog One-->
 
-        <!--Start Services Three-->
-        <section class="services-three">
-            <div class="services-three__bg" style="background-image: url('{{ asset('assets//img/background/services-v3-bg.jpg') }}');">
-            </div>
+        <!-- Start Team One-->
+        <section class="photo-one">
+            <div class="photo-one__bg" style="background-image: url('{{ asset('assets/img/bg/team-v1-bg.jpg') }}');"></div>
             <div class="container">
-                <div class="services-three__top">
-                    <div class="sec-title-style3">
+                <div class="photo-one__top">
+                    <div class="sec-title">
                         <div class="sub-title">
-                            <div class="icon">
-                                <img src="{{ asset('assets/img/icon/title-marker.png') }}" alt="">
-                            </div>
-                            <h5>Our Services</h5>
+                            <h5><span class="icon-right-arrow-1"></span> Our Workers</h5>
                         </div>
-                        <h2>We Provide all Kinds of <br> Logistics Service</h2>
+                        <h2>Meet with expert photo</h2>
                     </div>
 
                     <div class="btn-box">
-                        <a class="thm-btn" href="{{ route('roadTransport') }}">
-                            <span class="txt">View All Services</span>
+                        <a class="thm-btn" href="/home/photo">
+                            <span class="txt">View All Member</span> <i class="icon-right-arrow"></i>
                         </a>
                     </div>
                 </div>
 
-                <div class="thm-swiper__slider swiper-container" data-swiper-options='{"spaceBetween": 50,
+                <div class="photo-one__bottom">
+                    <div class="thm-swiper__slider swiper-container" data-swiper-options='{"spaceBetween": 24,
                         "slidesPerView": 3,
                         "loop": true,
                         "pagination": {
-                            "el": "#services-three__pagination",
+                            "el": "#photo-one__pagination",
                             "type": "bullets",
                             "clickable": true
                             },
                         "navigation": {
-                            "nextEl": "#team-one__swiper-button-next",
-                            "prevEl": "#team-one__swiper-button-prev"
+                            "nextEl": "#photo-one__swiper-button-next",
+                            "prevEl": "#photo-one__swiper-button-prev"
                         },
                         "autoplay": { "delay": 5000 },
                         "breakpoints": {
                             "0": {
-                                "spaceBetween": 24,
+                                "spaceBetween": 30,
                                 "slidesPerView": 1
                             },
                             "375": {
-                                "spaceBetween": 24,
+                                "spaceBetween": 30,
                                 "slidesPerView": 1
                             },
                             "575": {
-                                "spaceBetween": 24,
+                                "spaceBetween": 30,
                                 "slidesPerView": 1
                             },
                             "768": {
-                                "spaceBetween": 24,
+                                "spaceBetween": 30,
                                 "slidesPerView": 2
                             },
                             "992": {
-                                "spaceBetween": 24,
+                                "spaceBetween": 30,
                                 "slidesPerView": 3
                             },
                             "1200": {
                                 "spaceBetween": 24,
-                                "slidesPerView": 3
+                                "slidesPerView": 4
                             }
                         }
                     }'>
                     <div class="swiper-wrapper">
-
+                        @foreach ($photos as $item)
                         <div class="swiper-slide">
-                            <!--Start Services Three Single-->
-                            <div class="services-three__single">
-                                <div class="services-three__single-img">
+                            <!-- Start Team One Single-->
+                            <div class="photo-one__single">
+                                <div class="photo-one__single-img">
                                     <div class="inner">
-                                        <img src="{{ asset('assets/img/service/service-v3-img1.jpg') }}" alt="">
-                                        <div class="icon-box">
-                                            <span class="icon-road-transport t5"></span>
-                                        </div>
+                                        <!-- Tambahkan class 'gallery-item' dan atribut title -->
+                                        <a class="photo-home-popup gallery-item" href="{{ asset('storage/photo/'.$item->image) }}" title="">
+                                            <img src="{{ asset('storage/photo/'.$item->image) }}" class="img-fluid" alt="{{ $item->judul }}">
+                                        </a>
                                     </div>
                                 </div>
-
-                                <div class="services-three__single-content">
-                                    <div class="services-three__single-content-inner">
-                                        <h2><a href="{{ route('roadTransport') }}">Road Transport</a></h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing sed eiusmod</p>
-                                        <div class="count-box">
-                                            01
-                                        </div>
-                                        <div class="btn-box">
-                                            <a href="{{ route('roadTransport') }}">Read More <i class="icon-right-arrow-5"></i></a>
-
-                                            <div class="number-box">
-                                                01
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="photo-one__single-content">
+                                    <h3>{{ $item->judul}}</h3>
                                 </div>
                             </div>
-                            <!--End Services Three Single-->
+                            <!-- End Team One Single-->
                         </div>
-
-                        <div class="swiper-slide">
-                            <!--Start Services Three Single-->
-                            <div class="services-three__single">
-                                <div class="services-three__single-img">
-                                    <div class="inner">
-                                        <img src="{{ asset('assets/img/service/service-v3-img2.jpg') }}" alt="">
-                                        <div class="icon-box">
-                                            <span class="icon-ocean-freight1"></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="services-three__single-content">
-                                    <div class="services-three__single-content-inner">
-                                        <h2><a href="{{ route('roadTransport') }}">Ocean Freight</a></h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing sed eiusmod</p>
-                                        <div class="count-box">
-                                            02
-                                        </div>
-                                        <div class="btn-box">
-                                            <a href="{{ route('roadTransport') }}">Read More <i class="icon-right-arrow-5"></i></a>
-
-                                            <div class="number-box">
-                                                02
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End Services Three Single-->
-                        </div>
-
-
-                        <div class="swiper-slide">
-                            <!--Start Services Three Single-->
-                            <div class="services-three__single">
-                                <div class="services-three__single-img">
-                                    <div class="inner">
-                                        <img src="{{ asset('assets/img/service/service-v3-img3.jpg') }}" alt="">
-                                        <div class="icon-box">
-                                            <span class="icon-experience"></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="services-three__single-content">
-                                    <div class="services-three__single-content-inner">
-                                        <h2><a href="{{ route('roadTransport') }}">Cargo Container</a></h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing sed eiusmod</p>
-                                        <div class="count-box">
-                                            03
-                                        </div>
-                                        <div class="btn-box">
-                                            <a href="{{ route('roadTransport') }}">Read More <i class="icon-right-arrow-5"></i></a>
-
-                                            <div class="number-box">
-                                                03
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End Services Three Single-->
-                        </div>
+                        @endforeach
                     </div>
-                </div>
-                <!-- If we need navigation buttons -->
-                <div class="swiper-pagination" id="services-three__pagination"></div>
+                    </div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-pagination" id="photo-one__pagination"></div>
+            </div>
             </div>
         </section>
-        <!--End Services Three-->
+        <!-- End Team One-->
 
     </div>
 

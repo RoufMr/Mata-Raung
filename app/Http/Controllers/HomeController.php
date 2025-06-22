@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\Team;
 use App\Models\Photo;
+use App\Models\About;
 
 
 class HomeController extends Controller
@@ -16,6 +17,7 @@ class HomeController extends Controller
             'artikels' => Blog::where('status', true)->orderBy('id', 'desc')->limit(3)->get(), // Menampilkan artikel aktif
             'photos' => Photo::where('status', true)->orderBy('id', 'desc')->limit(4)->get(), // Menampilkan foto aktif
             'teams' => Team::where('status', true)->orderBy('id', 'desc')->limit(4)->get(), // Menampilkan foto aktif
+            'abouts' => About::all(), // Menampilkan foto aktif
         ]);
     }
 

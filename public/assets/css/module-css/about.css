@@ -36,13 +36,19 @@
 }
 
 .about-one__img .inner {
+    width: 100%;
+    height: 500px; /* Sesuaikan tinggi sesuai desain kamu */
+    overflow: hidden;
     position: relative;
-    display: block;
+    border-radius: 10px; /* Opsional */
 }
 
 .about-one__img .inner img {
-    max-width: none;
-    float: right;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    object-position: center;
 }
 
 .about-one__img .btn-box {

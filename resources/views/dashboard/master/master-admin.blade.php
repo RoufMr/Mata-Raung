@@ -745,6 +745,14 @@
             $('.dropdown-toggle').dropdown();
         });
     </script>
+    <script>
+        $(document).ready(function() {
+            $("#your_summernote2").summernote({
+                height: 300,
+            });
+            $('.dropdown-toggle').dropdown();
+        });
+    </script>
     <!-- //Summernote JS - CDN Link -->
 
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>

@@ -14,15 +14,16 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
     <div class="container">
         <div class="row">
             <!--Start About Three Img-->
+            @foreach($abouts as $about)
             <div class="col-xl-6">
                 <div class="about-three__img">
                     <div class="shape1"><img src="{{ asset('assets/img/shape/about-v3-shape1.png') }}" alt=""></div>
                     <div class="about-three__img1 wow fadeInLeft" data-wow-delay=".1s">
                         <img src="{{ asset('assets/img/about/about-v3-img1.jpg') }}" alt="">
                     </div>
-                    <!-- <div class="about-three__img2 wow fadeInRight" data-wow-delay=".1s">
+                    <div class="about-three__img2 wow fadeInRight" data-wow-delay=".1s">
                         <img src="{{ asset('assets/img/about/about-v3-img2.jpg') }}" alt="">
-                    </div> -->
+                    </div>
                     <div class="about-three__img-icon-box">
                         <div class="round-text">
                             <div class="curved-circle-3 rotate-me">
@@ -47,13 +48,17 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
                             </div>
                             <h5>About Company</h5>
                         </div>
-                        <h2>The Best Transport & <br>
-                            Logistic Company</h2>
+                        <h2>The Best Transport </h2>
                     </div>
                     <div class="about-three__content-text">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                             incididunt ut labore et dolore magna aliqua. Quis gravida risus suspend ultrices
-                            gravida.</p>
+                            gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Quis gravida risus suspend ultrices
+                            gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Quis gravida risus suspend ultrices
+                            gravida.
+                        </p>
                     </div>
 
                     <ul class="about-three__content-list">
@@ -105,6 +110,7 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
                 </div>
             </div>
             <!--End About Three Content-->
+            @endforeach
         </div>
     </div>
 </section>

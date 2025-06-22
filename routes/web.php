@@ -10,7 +10,9 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Auth\SocialiteController;
+
 
 
     // home
@@ -18,8 +20,8 @@ use App\Http\Controllers\Auth\SocialiteController;
     Route::get('/home/blog', [HomeController::class, 'blog']);
     Route::get('/detail/{slug}', [HomeController::class, 'detail']);
     Route::get('/home/team', [HomeController::class, 'team']);
-    Route::get('/home/photo', [HomeController::class, 'photo']);
     Route::get('/detail_team/{slug}', [HomeController::class, 'detail_team'])->name('detail_team');
+    Route::get('/home/photo', [HomeController::class, 'photo']);
     Route::get('/blog/standard', [HomeController::class, 'blog_standard']);
     Route::get('/contact', [HomeController::class, 'contact']);
     
@@ -96,8 +98,12 @@ Route::middleware('auth')->group(function () {
      Route::post('/photo/store', [PhotoController::class, 'store'])->name('photo.store');
      Route::post('/photo/update/{id}', [PhotoController::class, 'update'])->name('photo.update');
      Route::post('/photo/destroy/{id}', [PhotoController::class, 'destroy'])->name('photo.destroy');
-
-
+    
+    
+    Route::get('/about', [AboutController::class, 'index'])->name('about.index');
+    Route::get('/about/edit', [AboutController::class, 'edit'])->name('about.edit');
+    Route::put('/about/update', [AboutController::class, 'update'])->name('about.update');
+    
 });
 // Route::middleware(['auth'])->group(function () {
 // Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');

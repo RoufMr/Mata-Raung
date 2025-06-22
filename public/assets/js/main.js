@@ -530,6 +530,32 @@ if ($(".photo-popup").length) {
         }
     });
 }
+$(document).ready(function() {
+    // Inisialisasi gallery untuk semua gambar
+    $('.photo-home-popup').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true  // Aktifkan fitur gallery
+        },
+        image: {
+            titleSrc: function(item) {
+                // Menampilkan judul sebagai caption
+                return item.el.attr('title');
+            }
+        },
+        callbacks: {
+            // Memastikan semua gambar masuk dalam gallery yang sama
+            beforeOpen: function() {
+                this.items = $('.photo-home-popup').map(function() {
+                    return {
+                        src: $(this).attr('href'),
+                        title: $(this).attr('title')
+                    };
+                }).get();
+            }
+        }
+    });
+});
 
     /*=============================================
 	=    		Odometer Active  	       =
@@ -662,6 +688,27 @@ sidebarLinks.forEach(link => {
 // ============================
 document.addEventListener('DOMContentLoaded', function() {
     const titles = document.querySelectorAll('.photo-three__single-content h3');
+    
+    titles.forEach(title => {
+        const textLength = title.textContent.length;
+        let fontSize = 20; // Default
+        let lineHeight = 1.2; // Sesuaikan dengan kebutuhan
+
+        // Atur ukuran font berdasarkan panjang teks
+        if (textLength > 20) fontSize = 18;
+        if (textLength > 30) fontSize = 16;
+        if (textLength > 40) fontSize = 14;
+        if (textLength > 50) fontSize = 12;
+
+        // Perkecil line-height jika font kecil
+        if (fontSize <= 14) lineHeight = 1.1;
+
+        title.style.fontSize = fontSize + 'px';
+        title.style.lineHeight = lineHeight; // Tanpa unit (relatif)
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const titles = document.querySelectorAll('.photo-one__single-content h3');
     
     titles.forEach(title => {
         const textLength = title.textContent.length;

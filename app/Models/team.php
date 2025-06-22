@@ -9,8 +9,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Team extends Model
 {
     use HasFactory;
-    
-    protected $guarded = ['id'];
-    
+    protected $guarded = ['id']; 
     protected $dates = ['tanggallahir'];
 }
