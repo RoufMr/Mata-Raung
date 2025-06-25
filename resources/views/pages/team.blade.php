@@ -4,7 +4,7 @@
 $title='Our Team';
 $subTitle = 'Our Team';
 $css= '<link rel="stylesheet" href="' . asset('assets/css/color-3.css') . '" />';
-$script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>';  
+$script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>';
 @endphp
 
 @section('content')
@@ -35,22 +35,10 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
                     <!--End Team Three Single-->
 
                 </div>
-
-                <div class="team-three--team__bottom">
-                    <div class="text-box">
-                        <p>We’re Experience. Become a team member!</p>
-                    </div>
-
-                    <div class="btn-box">
-                        <a class="thm-btn" href="">
-                            <span class="txt">Join Our Team</span> <i class="icon-right-arrow"></i>
-                        </a>
-                    </div>
-                </div>
             </div>
         </section>
         <!--End Team Three-->
 
 
-        
+
 @endsection

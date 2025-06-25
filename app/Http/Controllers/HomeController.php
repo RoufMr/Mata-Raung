@@ -21,12 +21,20 @@ class HomeController extends Controller
         ]);
     }
 
-        public function blog()
-    {
-        return view('blog.blog', [
-            'artikels' => Blog::where('status', true)->orderBy('id', 'desc')->get(),
-        ]);
-    }
+    //     public function blog()
+    // {
+    //     return view('blog.blog', [
+    //         'artikels' => Blog::where('status', true)->orderBy('id', 'desc')->get(),
+    //     ]);
+    // }
+    public function blog()
+{
+    return view('blog.blog', [
+        'artikels' => Blog::where('status', true)
+                         ->orderBy('id', 'desc')
+                         ->paginate(6), // 6 item per halaman
+    ]);
+}
         public function team()
     {
         return view('pages.team', [
@@ -37,13 +45,23 @@ class HomeController extends Controller
     public function detail($slug)
     {
         $artikel = Blog::where('slug',$slug)->first();
-        return view('blog.blogDetails',[
-            'artikel' => $artikel
+        // return view('blog.blogDetails',[
+        //     'artikel' => $artikel
+        // ]);
+        // Ambil 4 team lainnya secara acak (atau sesuai kebutuhan)
+        $otherBlogs = Blog::where('slug', '!=', $slug)
+        ->inRandomOrder()
+        ->limit(4)
+        ->get();
+
+        return view('blog.blogDetails', [
+            'artikel' => $artikel,
+            'otherBlog' => $otherBlogs
         ]);
     }
     // public function blog_detail()
     // {
-    
+
     //     return view('blog.blogDetails',);
     // }
 
@@ -61,23 +79,25 @@ class HomeController extends Controller
     public function detail_team($slug)
     {
         $team = Team::where('slug', $slug)->first();
-        
+
         // Ambil 4 team lainnya secara acak (atau sesuai kebutuhan)
         $otherTeams = Team::where('slug', '!=', $slug)
                         ->inRandomOrder()
                         ->limit(4)
                         ->get();
-        
+
         return view('pages.teamDetails', [
             'team' => $team,
             'otherTeams' => $otherTeams
         ]);
     }
-    
+
     public function photo()
     {
         return view('pages.photo', [
-            'photos' => Photo::where('status', true)->orderBy('id', 'desc')->get() // Hanya menampilkan foto yang aktif
+            'photos' => Photo::where('status', true)
+            ->orderBy('id', 'desc')
+            ->paginate(6),
         ]);
     }
 }

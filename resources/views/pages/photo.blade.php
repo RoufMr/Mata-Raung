@@ -1,10 +1,10 @@
 @extends('layouts.layout')
 
 @php
-$title='Our Team';
-$subTitle = 'Our Team';
+$title='Our Gallery';
+$subTitle = 'Our Gallery';
 $css= '<link rel="stylesheet" href="' . asset('assets/css/color-3.css') . '" />';
-$script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>';  
+$script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>';
 @endphp
 
 @section('content')
@@ -35,21 +35,34 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
 
                 </div>
 
-                <div class="team-three--team__bottom">
-                    <div class="text-box">
-                        <p>We’re Experience. Become a team member!</p>
-                    </div>
+                <ul class="styled-pagination text-center clearfix">
+                    {{-- Previous Page Link --}}
+                    @if ($photos->onFirstPage())
+                        <li class="disabled"><span>&laquo;</span></li>
+                    @else
+                        <li><a href="{{ $photos->previousPageUrl() }}" rel="prev">&laquo;</a></li>
+                    @endif
 
-                    <div class="btn-box">
-                        <a class="thm-btn" href="">
-                            <span class="txt">Join Our Team</span> <i class="icon-right-arrow"></i>
-                        </a>
-                    </div>
-                </div>
+                    {{-- Pagination Elements --}}
+                    @foreach ($photos->links()->elements[0] as $page => $url)
+                        @if ($page == $photos->currentPage())
+                            <li class="active"><span>{{ $page }}</span></li>
+                        @else
+                            <li><a href="{{ $url }}">{{ $page }}</a></li>
+                        @endif
+                    @endforeach
+
+                    {{-- Next Page Link --}}
+                    @if ($photos->hasMorePages())
+                        <li><a href="{{ $photos->nextPageUrl() }}" rel="next">&raquo;</a></li>
+                    @else
+                        <li class="disabled"><span>&raquo;</span></li>
+                    @endif
+                </ul>
             </div>
         </section>
         <!--End Team Three-->
 
 
-        
+
 @endsection

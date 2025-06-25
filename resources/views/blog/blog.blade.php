@@ -4,7 +4,7 @@
 $title='Blog Gride';
 $subTitle = 'Blog';
 $css= '<link rel="stylesheet" href="' . asset('assets/css/color-3.css') . '" />';
-$script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>';  
+$script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>';
 @endphp
 
 @section('content')
@@ -27,7 +27,7 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
 
             <!--Start Services Three Single-->
             @foreach ($artikels as $item)
-            <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="col-xl-4 col-lg-4 col-md-6 dataTable">
                 <div class="blog-two__single services-three__single">
                     <div class="blog-two__single-img">
                         <div class="overlay-img__outer">
@@ -50,9 +50,9 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
                         </ul> -->
                         <h2><a href="/detail/{{ $item->slug }}">{{ Str::limit($item->judul, 60) }}</a></h2>
                         {{ $item->created_at->format('F d, Y') }}
-    
+
                         <!-- <p>{{ Str::limit(strip_tags($item->desc), 40, '...') }}</p> -->
-                            
+
                             <div class="count-box">
                                 {{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}
                             </div>
@@ -69,48 +69,45 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
             @endforeach
             <!--End Services Three Single-->
 
-            
+
         </div>
 
         <ul class="styled-pagination text-center clearfix">
+            {{-- Previous Page Link --}}
+            @if ($artikels->onFirstPage())
+                <li class="disabled"><span>&laquo;</span></li>
+            @else
+                <li><a href="{{ $artikels->previousPageUrl() }}" rel="prev">&laquo;</a></li>
+            @endif
+
+            {{-- Pagination Elements --}}
+            @foreach ($artikels->links()->elements[0] as $page => $url)
+                @if ($page == $artikels->currentPage())
+                    <li class="active"><span>{{ $page }}</span></li>
+                @else
+                    <li><a href="{{ $url }}">{{ $page }}</a></li>
+                @endif
+            @endforeach
+
+            {{-- Next Page Link --}}
+            @if ($artikels->hasMorePages())
+                <li><a href="{{ $artikels->nextPageUrl() }}" rel="next">&raquo;</a></li>
+            @else
+                <li class="disabled"><span>&raquo;</span></li>
+            @endif
+        </ul>
+
+        {{-- <ul class="styled-pagination text-center clearfix">
             <li><a href="#">1</a></li>
             <li><a href="#">2</a></li>
             <li><a href="#">3</a></li>
             <li class="arrow next active"><a href="#"><span class="icon-right-arrow1"></span></a>
             </li>
-        </ul>
+        </ul> --}}
     </div>
 </section>
 <!--End Blog Three-->
 
-<!--Start Cta Three-->
-<section class="cta-two style3 style4">
-    <div class="container">
-        <div class="cta-two__inner">
-            <div class="shape1"><img src="{{ asset('assets/img/shape/cta-v3-shape1.png') }}" alt=""></div>
-            <div class="shape2"><img src="{{ asset('assets/img/shape/cta-v3-shape2.png') }}" alt=""></div>
-            <div class="shape3 float-bob-x"><img src="{{ asset('assets/img/shape/cta-v3-shape3.png') }}" alt=""></div>
-            <div class="cta-two__inner-box">
-                <div class="sec-title-style3">
-                    <div class="sub-title">
-                        <div class="icon">
-                            <img src="{{ asset('assets/img/icon/title-marker-3.png') }}" alt="">
-                        </div>
-                        <h5>Get in touch</h5>
-                    </div>
-                    <h2>Looking for the best logistics <br>
-                        transport services</h2>
-                </div>
 
-                <div class="btn-box">
-                    <a class="thm-btn" href="#">
-                        <span class="txt">Request a Quote</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--End Cta Three-->
 
 @endsection
