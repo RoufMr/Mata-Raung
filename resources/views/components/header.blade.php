@@ -158,11 +158,11 @@
                                                 <!-- <li class="active menu-item-has-children"><a href="#">Home</a>
                                                     <ul class="sub-menu">
                                                         <li><a href="/">Home One</a></li>
-                                            
+
                                                     </ul>
                                                 </li> -->
                                                 <li><a href="/">Home</a></li>
-                                                <li><a href="{{ route('about') }}">About</a></li>
+                                                <li><a href="{{ route('detail_about') }}">About</a></li>
                                                 <li class="menu-item-has-children"><a href="#">Services</a>
                                                     <ul class="sub-menu">
                                                         <li><a href="{{ route('services') }}">Services</a></li>

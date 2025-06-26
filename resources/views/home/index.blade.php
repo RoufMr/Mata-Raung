@@ -175,11 +175,26 @@
                             <div class="btn-box">
                                 <div class="round-text">
                                     <div class="curved-circle rotate-me">
-                                        Mata Raung Indonesia - Since 2020 - 
+                                        Mata Raung Indonesia - Since 2020 -
                                     </div>
-                                    <a href="#">Read <br>More</a>
+                                    <a href="{{route('detail_about')}}">Read <br>More</a>
                                 </div>
                             </div>
+                        </div>
+                        <div class="about-one__content-features">
+                            <ul>
+                                <li class="wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                    <div class="inner">
+                                        <div class="icon-box">
+                                            <img src="{{ asset('assets/img/icon/about/worldwide-delivery.png') }}" alt="#">
+                                        </div>
+                                        <div class="text-box">
+                                            <h4>Vision</h4>
+                                            <p>"{{ $about->visi }}"</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
 
@@ -200,17 +215,6 @@
 
                             <div class="about-one__content-features">
                                 <ul>
-                                    <li class="wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-                                        <div class="inner">
-                                            <div class="icon-box">
-                                                <img src="{{ asset('assets/img/icon/about/worldwide-delivery.png') }}" alt="#">
-                                            </div>
-                                            <div class="text-box">
-                                                <h4>Vision</h4>
-                                                <p>"{{ $about->visi }}"</p>
-                                            </div>
-                                        </div>
-                                    </li>
 
                                     <li class="wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
                                         <div class="inner">
@@ -233,282 +237,11 @@
         </div>
         <!--End About One-->
 
-        <!--Start Service One -->
-        <section class="service-one">
-            <div class="container">
-                <div class="service-one__top">
-                    <div class="sec-title">
-                        <div class="sub-title">
-                            <h5><span class="icon-right-arrow-1"></span> Our Services</h5>
-                        </div>
-                        <h2>Fast and professional <br> Logistic services</h2>
-                    </div>
 
-                    <div class="btn-box">
-                        <a class="thm-btn" href="{{ route('services') }}">
-                            <span class="txt">View All Service</span> <i class="icon-right-arrow"></i>
-                        </a>
-                    </div>
-                </div>
 
-                <div class="thm-swiper__slider swiper-container" data-swiper-options='{"spaceBetween": 50,
-                    "slidesPerView": 3,
-                    "loop": true,
-                    "pagination": {
-                        "el": "#service-one__pagination",
-                        "type": "bullets",
-                        "clickable": true
-                        },
-                    "navigation": {
-                        "nextEl": "#team-one__swiper-button-next",
-                        "prevEl": "#team-one__swiper-button-prev"
-                    },
-                    "autoplay": { "delay": 5000 },
-                    "breakpoints": {
-                        "0": {
-                            "spaceBetween": 30,
-                            "slidesPerView": 1
-                        },
-                        "375": {
-                            "spaceBetween": 30,
-                            "slidesPerView": 1
-                        },
-                        "575": {
-                            "spaceBetween": 30,
-                            "slidesPerView": 1
-                        },
-                        "768": {
-                            "spaceBetween": 30,
-                            "slidesPerView": 2
-                        },
-                        "992": {
-                            "spaceBetween": 30,
-                            "slidesPerView": 3
-                        },
-                        "1200": {
-                            "spaceBetween": 50,
-                            "slidesPerView": 3
-                        }
-                    }
-                }'>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <!--Start Service One Single-->
-                            <div class="service-one__single">
-                                <div class="service-one__single-img">
-                                    <div class="inner">
-                                        <img src="{{ asset('assets/img/service/service-one__img1.jpg') }}" alt="#">
-                                        <div class="overlay-icon">
-                                            <img src="{{ asset('assets/img/icon/services/air-freight.png') }}" alt="#">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="service-one__single-content">
-                                    <h3><a href="{{ route('roadTransport') }}">Air Freight</a></h3>
-                                    <p>Following the quality of our service <br> thus having gained trust</p>
-                                    <div class="btn-box">
-                                        <a href="{{ route('roadTransport') }}">Read More <span class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End Service One Single-->
-                        </div>
 
-                        <div class="swiper-slide">
-                            <!--Start Service One Single-->
-                            <div class="service-one__single">
-                                <div class="service-one__single-img">
-                                    <div class="inner">
-                                        <img src="{{ asset('assets/img/service/service-one__img2.jpg') }}" alt="#">
-                                        <div class="overlay-icon">
-                                            <img src="{{ asset('assets/img/icon/services/ocean-freight.png') }}" alt="#">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="service-one__single-content">
-                                    <h3><a href="{{ route('roadTransport') }}">Ocean Freight</a></h3>
-                                    <p>Following the quality of our service <br> thus having gained trust</p>
-                                    <div class="btn-box">
-                                        <a href="{{ route('roadTransport') }}">Read More <span class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End Service One Single-->
-                        </div>
 
-                        <div class="swiper-slide">
-                            <!--Start Service One Single-->
-                            <div class="service-one__single">
-                                <div class="service-one__single-img">
-                                    <div class="inner">
-                                        <img src="{{ asset('assets/img/service/service-one__img3.jpg') }}" alt="#">
-                                        <div class="overlay-icon">
-                                            <img src="{{ asset('assets/img/icon/services/road-freight.png') }}" alt="#">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="service-one__single-content">
-                                    <h3><a href="{{ route('roadTransport') }}">Road Freight</a></h3>
-                                    <p>Following the quality of our service <br> thus having gained trust</p>
-                                    <div class="btn-box">
-                                        <a href="{{ route('roadTransport') }}">Read More <span class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End Service One Single-->
-                        </div>
 
-                        <div class="swiper-slide">
-                            <!--Start Service One Single-->
-                            <div class="service-one__single">
-                                <div class="service-one__single-img">
-                                    <div class="inner">
-                                        <img src="{{ asset('assets/img/service/service-one__img2.jpg') }}" alt="#">
-                                        <div class="overlay-icon">
-                                            <img src="{{ asset('assets/img/icon/services/ocean-freight.png') }}" alt="#">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="service-one__single-content">
-                                    <h3><a href="{{ route('roadTransport') }}">Ocean Freight</a></h3>
-                                    <p>Following the quality of our service <br> thus having gained trust</p>
-                                    <div class="btn-box">
-                                        <a href="{{ route('roadTransport') }}">Read More <span class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End Service One Single-->
-                        </div>
-                    </div>
-                </div>
-                <!-- If we need navigation buttons -->
-                <div class="swiper-pagination" id="service-one__pagination"></div>
-            </div>
-        </section>
-        <!--End Service One-->
-
-        <!--Start Video One-->
-        <section class="video-one">
-            <div class="container">
-                <div class="video-one__inner" style="background-image: url('{{ asset('assets/img/background/video-v1-bg.jpg') }}');">
-                    <div class="video-one__video">
-                        <a href="https://www.youtube.com/watch?v=6mkoGSqTqFI" class="video-one__video-btn video-popup">
-                            <span class="txt">Play</span>
-                        </a>
-                    </div>
-                    <div class="overlay-text">
-                        <h3><a href="#">Watch Our Intro</a></h3>
-                        <div class="icon">
-                            <a href="#"><span class="icon-right-arrow-2"></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--End Video One-->
-
-        <!--Start Working Process One-->
-        <section class="working-process-one">
-            <div class="working-process-one__bg" style="background-image: url('{{ asset('assets/img/background/working-process-v1-bg.jpg') }}');"></div>
-            <div class="container">
-                <div class="sec-title text-center">
-                    <div class="sub-title">
-                        <h5><span class="icon-right-arrow-1"></span> Check our steps</h5>
-                    </div>
-                    <h2>Our Freight Working Process</h2>
-                </div>
-                <div class="row">
-                    <!--Start Working Process One Single-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <div class="working-process-one__single">
-                            <div class="shape1"><img src="{{ asset('assets/img/shape/working-process-v1-shape1.png') }}" alt=""></div>
-                            <div class="working-process-one__single-top">
-                                <div class="icon">
-                                    <img src="{{ asset('assets/img/icon/working-process/step-1.png') }}" alt="">
-                                </div>
-                                <div class="text">
-                                    <h2>Step - 1</h2>
-                                </div>
-                            </div>
-                            <div class="working-process-one__single-content">
-                                <h2><a href="#">The Paperwork</a></h2>
-                                <p>Once you place your order via mail or fax our field staff will collect the documents
-                                    and
-                                    consignments from the shipper.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Working Process One Single-->
-
-                    <!--Start Working Process One Single-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <div class="working-process-one__single ml60">
-                            <div class="shape1"><img src="{{ asset('assets/img/shape/working-process-v1-shape1.png') }}" alt=""></div>
-                            <div class="working-process-one__single-top">
-                                <div class="icon">
-                                    <img src="{{ asset('assets/img/icon/working-process/step-2.png') }}" alt="">
-                                </div>
-                                <div class="text">
-                                    <h2>Step - 2</h2>
-                                </div>
-                            </div>
-                            <div class="working-process-one__single-content">
-                                <h2><a href="#">Select Location</a></h2>
-                                <p>We’ll evaluate the size and weight of your cargo, find just the right carrier to fly
-                                    your goods to their destination.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Working Process One Single-->
-
-                    <!--Start Working Process One Single-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInLeft" data-wow-delay="400ms" data-wow-duration="1500ms">
-                        <div class="working-process-one__single ml80">
-                            <div class="working-process-one__single-top">
-                                <div class="icon">
-                                    <img src="{{ asset('assets/img/icon/working-process/step-3.png') }}" alt="">
-                                </div>
-                                <div class="text">
-                                    <h2>Step - 3</h2>
-                                </div>
-                            </div>
-                            <div class="working-process-one__single-content">
-                                <h2><a href="#">Partners Till The End</a></h2>
-                                <p>Our teams will be working hard at every step of the journey to ensure that your
-                                    shipment is delivered on time.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Working Process One Single-->
-                </div>
-            </div>
-        </section>
-        <!--End Working Process One-->
-
-        <!--Start Cta One-->
-        <section class="cta-one">
-            <div class="container">
-                <div class="cta-one__inner">
-                    <div class="cta-one__shape1"><img src="{{ asset('assets/img/shape/cta-one__shape1.png') }}" alt=""></div>
-                    <div class="cta-one__shape2"><img src="{{ asset('assets/img/shape/cta-one__shape2.png') }}" alt=""></div>
-                    <div class="cta-one__shape3 float-bob-x">
-                        <img src="{{ asset('assets/img/shape/cta-one__shape5.png') }}" alt="#">
-                    </div>
-                    <div class="cta-one__inner-box">
-                        <div class="title-box">
-                            <h2>We are best transport agency for give best quality service</h2>
-                        </div>
-
-                        <div class="btn-box">
-                            <a class="thm-btn" href="#">
-                                <span class="txt">Request Services</span> <i class="icon-right-arrow"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--End Cta One-->
 
         <!--Start Choose Us One-->
         <section class="choose-us-one">
@@ -529,11 +262,10 @@
                                     <div class="icon-box">
                                         <span class="icon-global-network"></span>
                                     </div>
-                                    <h3><a href="#">Global Network</a></h3>
+                                    <h3><a href="#">Sustainable & <br>Eco-Conscious</a></h3>
                                 </div>
                                 <div class="text-box">
-                                    <p>Freight Consolidators connects your business with international hubs across the
-                                        world such as the USA.</p>
+                                    <p>Committed to responsible tourism, we support local communities and minimize environmental impact on every trip.</p>
                                 </div>
                             </div>
                         </div>
@@ -549,11 +281,10 @@
                                     <div class="icon-box">
                                         <span class="icon-right-time-delivery"></span>
                                     </div>
-                                    <h3><a href="#">Right Time Delivery</a></h3>
+                                    <h3><a href="#">Safety-First Approach</a></h3>
                                 </div>
                                 <div class="text-box">
-                                    <p>You place your order, and we’ll handle the rest. From pick-up to customs
-                                        clearance from tracking.</p>
+                                    <p>Every journey is backed by high-standard gear, travel insurance, and strict safety protocols to ensure your comfort and security.</p>
                                 </div>
                             </div>
                         </div>
@@ -569,11 +300,10 @@
                                     <div class="icon-box">
                                         <span class="icon-support"></span>
                                     </div>
-                                    <h3><a href="#">24-Hour Support</a></h3>
+                                    <h3><a href="#">Flexible Service</a></h3>
                                 </div>
                                 <div class="text-box">
-                                    <p>Our dedicated team is on the job, tracking every step of your shipment we’re
-                                        available 24/7 </p>
+                                    <p>Trips can be fully customized to your needs. Our team provides tailored recommendations for your perfect adventure.</p>
                                 </div>
                             </div>
                         </div>
@@ -589,11 +319,11 @@
                                     <div class="icon-box">
                                         <span class="icon-special-shipments"></span>
                                     </div>
-                                    <h3><a href="#">Special Shipments</a></h3>
+                                    <h3><a href="#">Local Expertise & Experience</a></h3>
                                 </div>
                                 <div class="text-box">
-                                    <p>If your goods have special movement, storage and handling requirements, we have
-                                        the expertise.</p>
+                                    <p>Our team consists of professional guides with years of experience in special interest tourism,
+                                        offering deep knowledge of exclusive destinations and the best routes.</p>
                                 </div>
                             </div>
                         </div>
@@ -609,11 +339,10 @@
                                     <div class="icon-box">
                                         <span class="icon-enter-product-details"></span>
                                     </div>
-                                    <h3><a href="#">Bespoke Solutions</a></h3>
+                                    <h3><a href="#">Unique & Tailored Adventures</a></h3>
                                 </div>
                                 <div class="text-box">
-                                    <p>We provide personalised intermodal solutions to all seaports and airports around
-                                        the world.</p>
+                                    <p>We design one-of-a-kind trips—from mountain expeditions to cultural immersions and extreme adventures—crafted for unforgettable experiences.</p>
                                 </div>
                             </div>
                         </div>
@@ -629,11 +358,10 @@
                                     <div class="icon-box">
                                         <span class="icon-esteemed-company"></span>
                                     </div>
-                                    <h3><a href="#">Esteemed Company</a></h3>
+                                    <h3><a href="#">Trusted by Adventurers</a></h3>
                                 </div>
                                 <div class="text-box">
-                                    <p>More than 4099 clients across the world have chosen us as their freight partner,
-                                        because of the competitive.</p>
+                                    <p>With hundreds of successful trips and glowing reviews, we’re proud to be a top choice for explorers.</p>
                                 </div>
                             </div>
                         </div>

@@ -100,4 +100,11 @@ class HomeController extends Controller
             ->paginate(6),
         ]);
     }
+
+    public function about()
+    {
+        return view('services.about', [
+            'abouts' => About::all()
+            ]);
+    }
 }

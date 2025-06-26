@@ -18,6 +18,7 @@ use App\Http\Controllers\Auth\SocialiteController;
     // home
     Route::get('/', [HomeController::class, 'index']);
     Route::get('/home/blog', [HomeController::class, 'blog']);
+    Route::get('/home/about', [HomeController::class, 'about'])->name('detail_about');
     Route::get('/detail/{slug}', [HomeController::class, 'detail'])->name('detail_blog');
     Route::get('/home/team', [HomeController::class, 'team']);
     Route::get('/detail_team/{slug}', [HomeController::class, 'detail_team'])->name('detail_team');
@@ -51,7 +52,7 @@ Route::prefix('pages')->group(function () {
     // services
 Route::prefix('services')->group(function () {
         Route::controller(ServicesController::class)->group(function () {
-            Route::get('/about', 'about')->name('about');
+            // Route::get('/about', 'about')->name('about');
             Route::get('/air-transport', 'airTransport')->name('airTransport');
             Route::get('/cargo-transport', 'cargoTransport')->name('cargoTransport');
             Route::get('/ocean-freight', 'oceanFreight')->name('oceanFreight');

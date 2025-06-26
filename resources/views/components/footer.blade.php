@@ -6,12 +6,17 @@
         <div class="container">
             <div class="footer-main__bottom">
                 <div class="row">
+                    <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="single-footer-widget footer-widget__links">
+                        <div class="logo-box">
+                            <a href="/"><img src="{{ asset('assets/img/resource/logo_nonbg.png') }}" alt=""></a>
+                        </div>
+                    </div>
+                </div>
                     <!--Start Single Footer Widget-->
                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".1s">
                         <div class="single-footer-widget footer-widget__about">
-                            <div class="logo-box">
-                                <a href="/"><img src="{{ asset('assets/img/resource/logo-5.png') }}" alt=""></a>
-                            </div>
+
                             <div class="footer-widget__about-inner">
                                 <div class="footer-widget__contact-box">
                                     <ul>
@@ -64,12 +69,12 @@
 
                             <div class="footer-widget__links-box">
                                 <ul>
-                                    <li><a href="{{ route('about') }}">Mission & Vision</a></li>
-                                    <li><a href="{{ route('about') }}">Get Pricing Plan</a></li>
-                                    <li><a href="{{ route('about') }}">Meet The Team</a></li>
-                                    <li><a href="{{ route('about') }}">Our Clients</a></li>
-                                    <li><a href="{{ route('about') }}">Available Positions</a></li>
-                                    <li><a href="{{ route('about') }}">Job Application</a></li>
+                                    <li><a href="{{ route('detail_about') }}">Mission & Vision</a></li>
+                                    <li><a href="{{ route('detail_about') }}">Get Pricing Plan</a></li>
+                                    <li><a href="{{ route('detail_about') }}">Meet The Team</a></li>
+                                    <li><a href="{{ route('detail_about') }}">Our Clients</a></li>
+                                    <li><a href="{{ route('detail_about') }}">Available Positions</a></li>
+                                    <li><a href="{{ route('detail_about') }}">Job Application</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -97,32 +102,7 @@
                     </div>
                     <!--End Single Footer Widget-->
 
-                    <!--Start Single Footer Widget-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".4s">
-                        <div class="single-footer-widget single-footer__newsletter">
-                            <div class="title">
-                                <h2>Newsletter</h2>
-                            </div>
-                            <div class="single-footer__newsletter-box">
-                                <div class="single-footer__newsletter-text1">
-                                    <p>Subscribe to our newsletter!</p>
-                                </div>
-                                <form class="single-footer__newsletter-form">
-                                    <div class="single-footer__newsletter-form-input">
-                                        <input type="email" placeholder="Enter Your Email" name="email">
-                                    </div>
 
-                                    <div class="single-footer__newsletter-btn">
-                                        <button class="thm-btn" type="submit">
-                                            <span class="txt">Subscribe New</span>
-                                            <i class="icon-right-arrow"></i>
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Single Footer Widget-->
                 </div>
             </div>
         </div>
@@ -144,9 +124,9 @@
                 </div>
                 <div class="copyright-menu">
                     <ul>
-                        <li><a href="{{ route('about') }}">Trams &amp; Condition</a></li>
-                        <li><a href="{{ route('about') }}">Privacy Policy</a></li>
-                        <li><a href="{{ route('about') }}">Support</a></li>
+                        <li><a href="{{ route('detail_about') }}">Trams &amp; Condition</a></li>
+                        <li><a href="{{ route('detail_about') }}">Privacy Policy</a></li>
+                        <li><a href="{{ route('detail_about') }}">Support</a></li>
                     </ul>
                 </div>
             </div>
