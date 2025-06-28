@@ -343,4 +343,6 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
 
 
 @endforeach
+@section('footer')
+@endsection
 @endsection

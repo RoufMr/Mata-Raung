@@ -1,4 +1,4 @@
-/*** 
+/***
 =============================================
     Footer One Css
 =============================================
@@ -38,7 +38,7 @@
 .footer-main {
     position: relative;
     display: block;
-    padding: 3px 0px 5px;
+    padding: 5px 0px 5px;
     overflow: hidden;
     z-index: 1;
 }
@@ -195,7 +195,7 @@
 .footer-main__bottom {
     position: relative;
     display: block;
-    padding: 50px 0px 0px;
+    padding: 50px 0px 50px;
 }
 
 .single-footer-widget {
@@ -221,6 +221,20 @@
     display: block;
     max-width: 330px;
     width: 100%;
+}
+
+.footer-widget__logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-width: 280px;
+    width: 100%;
+}
+
+.footer-widget__about-logo {
+    position: relative;
+    display: block;
+    margin-top: 28px;
 }
 
 .footer-widget__about-inner {
@@ -528,7 +542,7 @@
 }
 
 
-/*** 
+/***
 =============================================
     Footer Two Css
 =============================================
@@ -699,7 +713,7 @@
     margin-bottom: 0px;
 }
 
-/*** 
+/***
 =============================================
     Footer Three Css
 =============================================
@@ -732,9 +746,9 @@
 
 .footer-bottom__inner .social-links::before {
     position: absolute;
-    top: -22px;
+    top: -8px;
     left: 0;
-    bottom: -22px;
+    bottom: -8px;
     right: 0;
     background: #052240;
     content: "";

@@ -163,7 +163,11 @@
                                                 </li> -->
                                                 <li><a href="/">Home</a></li>
                                                 <li><a href="{{ route('detail_about') }}">About</a></li>
-                                                <li class="menu-item-has-children"><a href="#">Services</a>
+                                                <li><a href="{{ route('services') }}">Services</a></li>
+                                                <li><a href="{{ route('home.team') }}">Team</a></li>
+                                                <li><a href="{{ route('home.blog') }}">Blog</a></li>
+                                                <li><a href="{{ route('home.photo') }}">Gallery</a></li>
+                                                {{-- <li class="menu-item-has-children"><a href="#">Services</a>
                                                     <ul class="sub-menu">
                                                         <li><a href="{{ route('services') }}">Services</a></li>
                                                         <li><a href="{{ route('roadTransport') }}">Road Transport</a>
@@ -178,8 +182,8 @@
                                                         </li>
                                                         <li><a href="{{ route('warehousing') }}">Warehousing</a></li>
                                                     </ul>
-                                                </li>
-                                                <li class="menu-item-has-children"><a href="#">Pages</a>
+                                                </li> --}}
+                                                {{-- <li class="menu-item-has-children"><a href="#">Pages</a>
                                                     <ul class="sub-menu">
                                                         <li><a href="{{ route('team') }}">Team</a></li>
                                                         <li><a href="">Team Details</a>
@@ -189,16 +193,16 @@
                                                                 Details</a></li>
                                                         <li><a href="{{ route('pagesError') }}">404</a></li>
                                                     </ul>
-                                                </li>
-                                                <li class="menu-item-has-children"><a href="#">Blog</a>
+                                                </li> --}}
+                                                {{-- <li class="menu-item-has-children"><a href="#">Blog</a>
                                                     <ul class="sub-menu">
                                                         <li><a href="/home/blog">Blog</a></li>
-                                                        <li><a href="/home/standard">Blog standard</a>
+                                                        <li><a href="{{route('blogStandard')}}">Blog standard</a>
                                                         </li>
                                                         <li><a href="">Blog Details</a>
                                                         </li>
                                                     </ul>
-                                                </li>
+                                                </li> --}}
                                                 <li><a href="/contact">Contact</a></li>
                                             </ul>
                                         </div>
@@ -213,11 +217,11 @@
                                                 <span class="icon-menu"></span>
                                             </a>
                                         </div>
-                                        <div class="btn-box">
+                                        {{-- <div class="btn-box">
                                             <a class="thm-btn" href="#">
                                                 <span class="txt">Get Free Quote</span>
                                             </a>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
                             </div>

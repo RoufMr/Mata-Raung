@@ -67,7 +67,40 @@ class HomeController extends Controller
 
         public function blog_standard()
     {
-        return view('blog.blogStandard');
+        return view('blog.blogStandard',[
+
+        ]);
+    }
+
+    public function services ()
+    {
+        return view('services/services');
+    }
+
+    public function airTransport ()
+    {
+        return view('services/airTransport');
+    }
+    public function cargoTransport ()
+    {
+        return view('services/cargoTransport');
+    }
+    public function oceanFreight ()
+    {
+        return view('services/oceanFreight');
+    }
+    public function railTransport ()
+    {
+        return view('services/railTransport');
+    }
+    public function roadTransport ()
+    {
+        return view('services/roadTransport');
+    }
+
+    public function warehousing ()
+    {
+        return view('services/warehousing');
     }
         public function contact()
     {

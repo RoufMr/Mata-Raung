@@ -16,16 +16,31 @@ use App\Http\Controllers\Auth\SocialiteController;
 
 
     // home
-    Route::get('/', [HomeController::class, 'index']);
-    Route::get('/home/blog', [HomeController::class, 'blog']);
-    Route::get('/home/about', [HomeController::class, 'about'])->name('detail_about');
-    Route::get('/detail/{slug}', [HomeController::class, 'detail'])->name('detail_blog');
-    Route::get('/home/team', [HomeController::class, 'team']);
-    Route::get('/detail_team/{slug}', [HomeController::class, 'detail_team'])->name('detail_team');
-    Route::get('/home/photo', [HomeController::class, 'photo']);
-    Route::get('/blog/standard', [HomeController::class, 'blog_standard']);
-    Route::get('/contact', [HomeController::class, 'contact']);
+    Route::controller(HomeController::class)->group(function () {
+        Route::get('/', 'index');
 
+        Route::get('/home/blog', 'blog')->name('home.blog');
+        Route::get('/detail/{slug}', 'detail')->name('detail_blog');
+
+        Route::get('/home/about', 'about')->name('detail_about');
+
+        Route::get('/home/team', 'team')->name('home.team');
+        Route::get('/detail_team/{slug}', 'detail_team')->name('detail_team');
+
+        Route::get('/home/photo', 'photo')->name('home.photo');
+
+        Route::get('/blog/standard', 'blog_standard')->name('blogStandard');
+
+        Route::get('/contact', 'contact');
+
+        Route::get('/services', 'services')->name('services');
+        Route::get('/air-transport', 'airTransport')->name('airTransport');
+        Route::get('/cargo-transport', 'cargoTransport')->name('cargoTransport');
+        Route::get('/ocean-freight', 'oceanFreight')->name('oceanFreight');
+        Route::get('/rail-transport', 'railTransport')->name('railTransport');
+        Route::get('/road-transport', 'roadTransport')->name('roadTransport');
+        Route::get('/warehousing', 'warehousing')->name('warehousing');
+    });
 
 
     // blog
@@ -50,18 +65,18 @@ Route::prefix('pages')->group(function () {
 });
 
     // services
-Route::prefix('services')->group(function () {
-        Route::controller(ServicesController::class)->group(function () {
-            // Route::get('/about', 'about')->name('about');
-            Route::get('/air-transport', 'airTransport')->name('airTransport');
-            Route::get('/cargo-transport', 'cargoTransport')->name('cargoTransport');
-            Route::get('/ocean-freight', 'oceanFreight')->name('oceanFreight');
-            Route::get('/rail-transport', 'railTransport')->name('railTransport');
-            Route::get('/road-transport', 'roadTransport')->name('roadTransport');
-            Route::get('/services', 'services')->name('services');
-            Route::get('/warehousing', 'warehousing')->name('warehousing');
-        });
-});
+// Route::prefix('services')->group(function () {
+//         Route::controller(ServicesController::class)->group(function () {
+//             // Route::get('/about', 'about')->name('about');
+//             Route::get('/air-transport', 'airTransport')->name('airTransport');
+//             Route::get('/cargo-transport', 'cargoTransport')->name('cargoTransport');
+//             Route::get('/ocean-freight', 'oceanFreight')->name('oceanFreight');
+//             Route::get('/rail-transport', 'railTransport')->name('railTransport');
+//             Route::get('/road-transport', 'roadTransport')->name('roadTransport');
+//             // Route::get('/services', 'services')->name('services');
+//             Route::get('/warehousing', 'warehousing')->name('warehousing');
+//         });
+// });
 
 
 Route::middleware('guest')->group(function () {

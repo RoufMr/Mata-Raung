@@ -4,7 +4,7 @@
 $title='Contact Us';
 $subTitle = 'Contact Us';
 $css= '<link rel="stylesheet" href="' . asset('assets/css/color-3.css') . '" />';
-$script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>';  
+$script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>';
 @endphp
 
 @section('content')
@@ -16,70 +16,86 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
             <div class="container">
                 <div class="row">
                     <!--Start Contact Page Contact Info-->
-                    <div class="col-xl-5">
-                        <div class="contact-page__contact-info">
-                            <div class="sec-title-style3">
-                                <div class="sub-title">
-                                    <div class="icon">
-                                        <img src="{{ asset('assets/img/icon/title-marker-4.png') }}" alt="">
+                    <div class="col-xl-6">
+
+                            <div class="contact-page__contact-info">
+                                <div class="sec-title-style3">
+                                    <div class="sub-title">
+                                        <div class="icon">
+                                            <img src="{{ asset('assets/img/icon/title-marker-4.png') }}" alt="">
+                                        </div>
+                                        <h5>Get In Touch</h5>
                                     </div>
-                                    <h5>Get In Touch</h5>
+                                    <h2>Contact Us Today</h2>
                                 </div>
-                                <h2>Contact Us Today</h2>
+
+                                <!-- New wrapper for side-by-side layout -->
+                                <div class="contact-page__content-wrapper">
+                                    <!-- Contact list on the left -->
+                                    <div class="contact-page__contact-list">
+                                        <ul>
+                                            <li>
+                                                <div class="icon-box">
+                                                    <span class="icon-telephone-call"></span>
+                                                </div>
+
+                                                <div class="text-box">
+                                                    <p>Call Us Toll Free</p>
+                                                    <h2><a href="tel:123456789">+123 556 8824</a></h2>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="icon-box">
+                                                    <span class="icon-location"></span>
+                                                </div>
+
+                                                <div class="text-box">
+                                                    <p>London Office</p>
+                                                    <h2>4517 Washington Ave. <br> Manchester</h2>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="icon-box">
+                                                    <span class="icon-email"></span>
+                                                </div>
+
+                                                <div class="text-box">
+                                                    <p>Email Us</p>
+                                                    <h2><a href="mailto:yourmail@email.com">translo@Support.com</a></h2>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="icon-box">
+                                                    <span class="icon-time"></span>
+                                                </div>
+
+                                                <div class="text-box">
+                                                    <p>Opening Time</p>
+                                                    <h2>Thursday - Saturday <br>
+                                                        10am : 08pm</h2>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Social links on the right -->
+                                    <div class="contact-page_social-links">
+                                        <a href=""><span class="icon-facebook"></span></a>
+                                        <a href=""><span class="fab fa-tiktok"></span></a>
+                                        <a href=""><span class="icon-instagram"></span></a>
+                                        <a href=""><span class="fab fa-youtube"></span></a>
+                                    </div>
+                                </div>
                             </div>
 
-                            <ul>
-                                <li>
-                                    <div class="icon-box">
-                                        <span class="icon-telephone-call"></span>
-                                    </div>
-
-                                    <div class="text-box">
-                                        <p>Call Us Toll Free</p>
-                                        <h2><a href="tel:123456789">+123 556 8824</a></h2>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="icon-box">
-                                        <span class="icon-location"></span>
-                                    </div>
-
-                                    <div class="text-box">
-                                        <p>London Office</p>
-                                        <h2>4517 Washington Ave. <br> Manchester</h2>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="icon-box">
-                                        <span class="icon-email"></span>
-                                    </div>
-
-                                    <div class="text-box">
-                                        <p>Email Us</p>
-                                        <h2><a href="mailto:yourmail@email.com">translo@Support.com</a></h2>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="icon-box">
-                                        <span class="icon-time"></span>
-                                    </div>
-
-                                    <div class="text-box">
-                                        <p>Opening Time</p>
-                                        <h2>Thursday - Saturday <br>
-                                            10am : 08pm</h2>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                     <!--End Contact Page Contact Info-->
 
                     <!--Start Contact Page Form-->
-                    <div class="col-xl-7">
+                    <div class="col-xl-6">
                         <div class="contact-page__form-box">
                             <div class="title">
                                 <h2>Feel free to write Us</h2>
@@ -140,38 +156,8 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
 
         <!--Start Google Map Two-->
         <section class="google-map-two">
-            <iframe src="{{ asset('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd') }}" class="google-map-two__map" allowfullscreen></iframe>
+            <iframe src="{{ asset('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5104.897126391512!2d114.35019609999999!3d-8.283045399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd15bb13b4a5291%3A0x687d99702fbe0652!2sBasecamp%20Mata%20Raung%20Indonesia!5e1!3m2!1sid!2sid!4v1750995067776!5m2!1sid!2sid') }}" class="google-map-two__map" allowfullscreen></iframe>
         </section>
         <!--End Google Map Two-->
-
-        <!--Start Cta Three-->
-        <section class="cta-two style3">
-            <div class="container">
-                <div class="cta-two__inner">
-                    <div class="shape1"><img src="{{ asset('assets/img/shape/cta-v3-shape1.png') }}" alt=""></div>
-                    <div class="shape2"><img src="{{ asset('assets/img/shape/cta-v3-shape2.png') }}" alt=""></div>
-                    <div class="shape3 float-bob-x"><img src="{{ asset('assets/img/shape/cta-v3-shape3.png') }}" alt=""></div>
-                    <div class="cta-two__inner-box">
-                        <div class="sec-title-style3">
-                            <div class="sub-title">
-                                <div class="icon">
-                                    <img src="{{ asset('assets/img/icon/title-marker-3.png') }}" alt="">
-                                </div>
-                                <h5>Get in touch</h5>
-                            </div>
-                            <h2>Looking for the best logistics <br>
-                                transport services</h2>
-                        </div>
-
-                        <div class="btn-box">
-                            <a class="thm-btn" href="#">
-                                <span class="txt">Request a Quote</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--End Cta Three-->
 
 @endsection

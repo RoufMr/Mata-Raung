@@ -4,7 +4,7 @@
 .about-one {
     position: relative;
     display: block;
-    padding: 120px 0px 120px;
+    padding: 120px 0px 50px;
     z-index: 1;
 }
 
@@ -41,6 +41,7 @@
     overflow: hidden;
     position: relative;
     border-radius: 10px; /* Opsional */
+    z-index: 1;
 }
 
 .about-one__img .inner img {
@@ -123,6 +124,14 @@
     padding-bottom: 20px;
 }
 
+.about-one__content-mission {
+    position: relative;
+    display: block;
+    /* padding-left: 80px; */
+    z-index: 2;
+
+}
+
 .about-one__content-features {
     position: relative;
     display: block;
@@ -135,10 +144,11 @@
 
 .about-one__content-features ul li {
     position: relative;
-    display: block;
+    /* display: block; */
     background-color: var(--thm-body-background);
     box-shadow: 0px 4px 15px 0px rgba(13, 66, 80, 0.08);
     padding: 33px 29px 31px;
+
 }
 
 .about-one__content-features ul li+li {
@@ -149,6 +159,10 @@
     position: relative;
     display: flex;
     align-items: center;
+    height: 100%;
+    min-height: 180px;
+    border: 1px solid var(--thm-primary);
+    border-bottom-left-radius: 4px;
 }
 
 .about-one__content-features ul li .inner .icon-box {

@@ -181,21 +181,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="about-one__content-features">
-                            <ul>
-                                <li class="wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-                                    <div class="inner">
-                                        <div class="icon-box">
-                                            <img src="{{ asset('assets/img/icon/about/worldwide-delivery.png') }}" alt="#">
-                                        </div>
-                                        <div class="text-box">
-                                            <h4>Vision</h4>
-                                            <p>"{{ $about->visi }}"</p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+
                     </div>
 
                     <div class="col-xl-7">
@@ -213,6 +199,34 @@
                                 </div>
                             </div>
 
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="about-one__content-mission">
+                            <div class="about-one__content-features">
+                                <ul>
+                                    <li class="wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                        <div class="inner">
+                                            <div class="icon-box">
+                                                <img src="{{ asset('assets/img/icon/about/worldwide-delivery.png') }}" alt="#">
+                                            </div>
+                                            <div class="text-box">
+                                                <h4>Vision</h4>
+                                                <p>"{{ $about->visi }}"</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="about-one__content-mission">
                             <div class="about-one__content-features">
                                 <ul>
 
@@ -231,17 +245,12 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
                 @endforeach
             </div>
         </div>
         <!--End About One-->
-
-
-
-
-
-
 
         <!--Start Choose Us One-->
         <section class="choose-us-one">
@@ -437,10 +446,10 @@
         <!--End Fact Counter One-->
 
         <!--Start Project One-->
-        <section class="project-one">
-            <div class="project-one__bg" style="background-image: url('{{ asset('assets/img/bg/project-v1-bg.jpg') }}');"></div>
+        {{-- <section class="project-one">
+            <div class="project-one__bg" style="background-image: url('{{ asset('assets/img/bg/81956.jpg') }}');"></div>
             <div class="shape1"><img src="{{ asset('assets/img/shape/project-v1-shape1.png') }}" alt=""></div>
-            <div class="shape2"><img src="{{ asset('assets/img/shape/project-v1-shape2.png') }}" alt=""></div>
+            <div class="shape2"><img src="{{ asset('assets/img/shape/project-v1-shape3.png') }}" alt=""></div>
             <div class="container">
                 <div class="project-one__top">
                     <div class="sec-title">
@@ -634,389 +643,8 @@
                     <div class="swiper-pagination" id="project-one__pagination"></div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!--End Project One-->
-
-        <!--Start Request Services One-->
-        <section class="request-services-one">
-            <div class="request-services-one__bg" style="background-image: url('{{ asset('assets/img/background/request-services-v1-bg.jpg') }}');"></div>
-            <div class="shape1 float-bob-y"><img src="{{ asset('assets/img/shape/request-services-v1-shape1.png') }}" alt=""></div>
-            <div class="container">
-
-                <div class="request-services-one__top">
-                    <div class="sec-title">
-                        <div class="sub-title">
-                            <h5><span class="icon-right-arrow-1"></span> Request Services</h5>
-                        </div>
-                        <h2>Get a Free Freight Quote</h2>
-                    </div>
-
-                    <div class="text-box">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Quis ipsum gravida risus commodo viverra maecenas.</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <!--Start Request Services One Form-->
-                    <div class="col-xl-8">
-                        <div class="request-services-one__form-box">
-                            <div class="request-services-one__form-tab tabs-box">
-                                <ul class="tab-buttons clearfix list-unstyled">
-                                    <li data-tab="#quote" class="tab-btn active-btn"><span>Request A Quote</span></li>
-                                    <li data-tab="#track" class="tab-btn"><span>Track & Trace</span></li>
-                                </ul>
-
-                                <div class="tabs-content">
-                                    <!--Start Single Tab-->
-                                    <div class="tab" id="quote">
-                                        <div class="request-services-one__single-tab">
-                                            <form id="contact-form" class="default-form2 contact-form-validated request-services-one__form" action="assets/inc/sendemail.php" novalidate="novalidate">
-
-                                                <div class="request-services-one__form-top">
-                                                    <div class="title-box">
-                                                        <h3>General Information:</h3>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Full Name</label>
-                                                                <input type="text" name="name" value="" placeholder="Ronald Richards" required="">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Phone Number</label>
-                                                                <input type="text" placeholder="+1256 456 7890" name="phone">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Email Address</label>
-                                                                <input type="email" name="email" value="" placeholder="ronald@gmail.com" required="">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Freight Type</label>
-                                                                <div class="select-box">
-                                                                    <select class="selectmenu wide">
-                                                                        <option selected="selected">Air Freight</option>
-                                                                        <option>Air Freight</option>
-                                                                        <option>Air Freight</option>
-                                                                        <option>Air Freight</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Departure City</label>
-                                                                <input type="text" placeholder="New York" name="city">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Delivery City</label>
-                                                                <input type="text" placeholder="Las Angle" name="city2">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="request-services-one__form-bottom">
-                                                    <div class="title-box">
-                                                        <h3>Dimensions of Departure:</h3>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                                            <div class="input-box">
-                                                                <label>Incoterms</label>
-                                                                <div class="select-box">
-                                                                    <select class="selectmenu wide">
-                                                                        <option selected="selected">Value 1</option>
-                                                                        <option>Value 2</option>
-                                                                        <option>Value 3</option>
-                                                                        <option>Value 4</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                                            <div class="input-box">
-                                                                <label>Height</label>
-                                                                <input type="number" placeholder="3" name="height">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                                            <div class="input-box">
-                                                                <label>Width</label>
-                                                                <input type="number" placeholder="3" name="width">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                                            <div class="input-box">
-                                                                <label>Length</label>
-                                                                <input type="number" placeholder="4" name="length">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="request-services-one__form-bottom-tag">
-                                                        <div class="title">
-                                                            <h3>Extra services:</h3>
-                                                        </div>
-
-                                                        <div class="tag-box">
-                                                            <div class="single-tags">
-                                                                <input type="checkbox" name="express-delivery" id="tag_1">
-                                                                <label for="tag_1"><span></span>Express Delivery</label>
-                                                            </div>
-
-                                                            <div class="single-tags">
-                                                                <input type="checkbox" name="express-delivery" id="tag_2">
-                                                                <label for="tag_2"><span></span>Insurance</label>
-                                                            </div>
-
-                                                            <div class="single-tags">
-                                                                <input type="checkbox" name="express-delivery" id="tag_3">
-                                                                <label for="tag_3"><span></span>Packaging</label>
-                                                            </div>
-
-                                                            <div class="single-tags">
-                                                                <input type="checkbox" name="express-delivery" id="tag_4">
-                                                                <label for="tag_4"><span></span>Fragile</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-xl-6 col-lg-6 col-md-6">
-                                                        <div class="request-services-one__form-btn">
-                                                            <button class="thm-btn" type="submit" data-loading-text="Please wait...">
-                                                                <span class="txt">Submit Now</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <!--End Single Tab-->
-
-                                    <!--Start Single Tab-->
-                                    <div class="tab active-tab" id="track">
-                                        <div class="request-services-one__single-tab">
-                                            <form id="contact-form2" class="default-form2 contact-form-validated request-services-one__form" action="assets/inc/sendemail.php" novalidate="novalidate">
-
-                                                <div class="request-services-one__form-top">
-                                                    <div class="title-box">
-                                                        <h3>General Information:</h3>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Full Name</label>
-                                                                <input type="text" name="name" value="" placeholder="Ronald Richards" required="">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Phone Number</label>
-                                                                <input type="text" placeholder="+1256 456 7890" name="phone">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Email Address</label>
-                                                                <input type="email" name="email" value="" placeholder="ronald@gmail.com" required="">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Freight Type</label>
-                                                                <div class="select-box">
-                                                                    <select class="selectmenu wide">
-                                                                        <option selected="selected">Air Freight</option>
-                                                                        <option>Air Freight</option>
-                                                                        <option>Air Freight</option>
-                                                                        <option>Air Freight</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Departure City</label>
-                                                                <input type="text" placeholder="New York" name="city">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Delivery City</label>
-                                                                <input type="text" placeholder="Las Angle" name="city2">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="request-services-one__form-bottom">
-                                                    <div class="title-box">
-                                                        <h3>Dimensions of Departure:</h3>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                                            <div class="input-box">
-                                                                <label>Incoterms</label>
-                                                                <div class="select-box">
-                                                                    <select class="selectmenu wide">
-                                                                        <option selected="selected">Value 1</option>
-                                                                        <option>Value 2</option>
-                                                                        <option>Value 3</option>
-                                                                        <option>Value 4</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                                            <div class="input-box">
-                                                                <label>Height</label>
-                                                                <input type="number" placeholder="3" name="height">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                                            <div class="input-box">
-                                                                <label>Width</label>
-                                                                <input type="number" placeholder="3" name="width">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                                            <div class="input-box">
-                                                                <label>Length</label>
-                                                                <input type="number" placeholder="4" name="length">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="request-services-one__form-bottom-tag">
-                                                        <div class="title">
-                                                            <h3>Extra services:</h3>
-                                                        </div>
-
-                                                        <div class="tag-box">
-                                                            <div class="single-tags">
-                                                                <input type="checkbox" name="express-delivery" id="tag_5">
-                                                                <label for="tag_5"><span></span>Express Delivery</label>
-                                                            </div>
-
-                                                            <div class="single-tags">
-                                                                <input type="checkbox" name="express-delivery" id="tag_6">
-                                                                <label for="tag_6"><span></span>Insurance</label>
-                                                            </div>
-
-                                                            <div class="single-tags">
-                                                                <input type="checkbox" name="express-delivery" id="tag_7">
-                                                                <label for="tag_7"><span></span>Packaging</label>
-                                                            </div>
-
-                                                            <div class="single-tags">
-                                                                <input type="checkbox" name="express-delivery" id="tag_8">
-                                                                <label for="tag_8"><span></span>Fragile</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-xl-6 col-lg-6 col-md-6">
-                                                        <div class="request-services-one__form-btn">
-                                                            <button class="thm-btn" type="submit" data-loading-text="Please wait...">
-                                                                <span class="txt">Submit Now</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <!--End Single Tab-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Request Services One Form-->
-
-                    <!--Start Request Services One Content-->
-                    <div class="col-xl-4">
-                        <div class="request-services-one__content">
-                            <div class="request-services-one__content-img">
-                                <div class="inner">
-                                    <img src="{{ asset('assets/img/resource/request-services-v1-img1.jpg') }}" alt="">
-                                    <div class="request-services-one__video">
-                                        <a href="https://www.youtube.com/watch?v=6mkoGSqTqFI" class="request-services-one__video-icon video-popup">
-                                            <span class="txt icon-play-button-arrowhead"></span>
-                                        </a>
-                                        <div class="title">
-                                            <h3><a href="#">Watch Now</a></h3>
-                                        </div>
-                                    </div>
-                                    <div class="text-box">
-                                        <h3>How to <br> Transport <br> your Product</h3>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <ul class="request-services-one__content-list">
-                                <li>
-                                    <div class="icon-box">
-                                        <span class="icon-global-network"></span>
-                                    </div>
-
-                                    <div class="text-box">
-                                        <h3>Fast Worldwide Delivery</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="icon-box">
-                                        <span class="icon-enter-product-details"></span>
-                                    </div>
-
-                                    <div class="text-box">
-                                        <h3>Safe And Secure Delivery</h3>
-                                        <p>Lorem ipsum dolor sit amet.</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!--End Request Services One Content-->
-                </div>
-            </div>
-        </section>
-        <!--End Request Services One-->
 
         <!--Start Testimonials One-->
         <section class="testimonials-one">
@@ -1236,7 +864,9 @@
 
         <!-- Start Team One-->
         <section class="team-one">
-            <div class="team-one__bg" style="background-image: url('{{ asset('assets/img/bg/team-v1-bg.jpg') }}');"></div>
+            <div class="team-one__bg" style="background-image: url('{{ asset('assets/img/bg/81956.jpg') }}');"></div>
+            <div class="shape1"><img src="{{ asset('assets/img/shape/project-v1-shape1.png') }}" alt=""></div>
+            <div class="shape2"><img src="{{ asset('assets/img/shape/project-v1-shape3.png') }}" alt=""></div>
             <div class="container">
                 <div class="team-one__top">
                     <div class="sec-title">
@@ -1522,19 +1152,21 @@
 
         <!-- Start Team One-->
         <section class="photo-one">
-            <div class="photo-one__bg" style="background-image: url('{{ asset('assets/img/bg/team-v1-bg.jpg') }}');"></div>
+            <div class="photo-one__bg" style="background-image: url('{{ asset('assets/img/bg/81956.jpg') }}');"></div>
+            <div class="shape1"><img src="{{ asset('assets/img/shape/project-v1-shape1.png') }}" alt=""></div>
+            <div class="shape2"><img src="{{ asset('assets/img/shape/project-v1-shape3.png') }}" alt=""></div>
             <div class="container">
                 <div class="photo-one__top">
                     <div class="sec-title">
                         <div class="sub-title">
-                            <h5><span class="icon-right-arrow-1"></span> Our Workers</h5>
+                            <h5><span class="icon-right-arrow-1"></span> Our Gallery</h5>
                         </div>
-                        <h2>Meet with expert photo</h2>
+                        <h2>Thrown away darling</h2>
                     </div>
 
                     <div class="btn-box">
                         <a class="thm-btn" href="/home/photo">
-                            <span class="txt">View All Member</span> <i class="icon-right-arrow"></i>
+                            <span class="txt">View All Gallery</span> <i class="icon-right-arrow"></i>
                         </a>
                     </div>
                 </div>

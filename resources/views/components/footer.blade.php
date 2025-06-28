@@ -1,22 +1,24 @@
 <footer class="footer-one style3">
     <div class="footer-one__bg" style="background-image: url('{{ asset('assets/img/footer/111.jpg') }}');"></div>
-    <!-- <div class="shape2 float-bob-y"><img src="{{ asset('assets/img/shape/footer-v2-shape2.png') }}" alt=""></div> -->
+    {{-- <!-- <div class="shape2 float-bob-y"><img src="{{ asset('assets/img/shape/footer-v2-shape2.png') }}" alt=""></div> --> --}}
     <!-- Start Footer Main -->
     <div class="footer-main">
         <div class="container">
             <div class="footer-main__bottom">
                 <div class="row">
-                    <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                        <div class="single-footer-widget footer-widget__links">
-                        <div class="logo-box">
-                            <a href="/"><img src="{{ asset('assets/img/resource/logo_nonbg.png') }}" alt=""></a>
+                    <!--Start Single Footer Widget-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".1s">
+                        <div class="single-footer-widget footer-widget__logo">
+                            <div class="logo-box">
+                                <a href="/"><img src="{{ asset('assets/img/resource/logo_nonbg.png') }}" width="300px" alt=""></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                    <!--Start Single Footer Widget-->
                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".1s">
                         <div class="single-footer-widget footer-widget__about">
-
+                            {{-- <div class="logo-box">
+                                <a href="/"><img src="{{ asset('assets/img/resource/logo_nonbg.png') }}" width="300px" alt=""></a>
+                            </div> --}}
                             <div class="footer-widget__about-inner">
                                 <div class="footer-widget__contact-box">
                                     <ul>
@@ -27,7 +29,7 @@
 
                                             <div class="content-box">
                                                 <p>Address</p>
-                                                <h4>Jones Street, New York, USA</h4>
+                                                <h4>Sukojati, Blimbingsari, Banyuwangi</h4>
                                             </div>
                                         </li>
 
@@ -38,7 +40,7 @@
 
                                             <div class="content-box">
                                                 <p>Email</p>
-                                                <h4><a href="mailto:yourmail@email.com">Support@example.com</a>
+                                                <h4><a href="mailto:mataraung@email.com">mataraung@gmail.com</a>
                                                 </h4>
                                             </div>
                                         </li>
@@ -50,7 +52,7 @@
 
                                             <div class="content-box">
                                                 <p>Phone</p>
-                                                <h4><a href="tel:123456789">+70 264 566 579</a></h4>
+                                                <h4><a href="https://wa.me/6282131819945">+62 821 3181 9945</a></h4>
                                             </div>
                                         </li>
                                     </ul>
@@ -102,7 +104,32 @@
                     </div>
                     <!--End Single Footer Widget-->
 
+                    <!--Start Single Footer Widget-->
+                    {{-- <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="single-footer-widget single-footer__newsletter">
+                            <div class="title">
+                                <h2>Newsletter</h2>
+                            </div>
+                            <div class="single-footer__newsletter-box">
+                                <div class="single-footer__newsletter-text1">
+                                    <p>Subscribe to our newsletter!</p>
+                                </div>
+                                <form class="single-footer__newsletter-form">
+                                    <div class="single-footer__newsletter-form-input">
+                                        <input type="email" placeholder="Enter Your Email" name="email">
+                                    </div>
 
+                                    <div class="single-footer__newsletter-btn">
+                                        <button class="thm-btn" type="submit">
+                                            <span class="txt">Subscribe New</span>
+                                            <i class="icon-right-arrow"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div> --}}
+                    <!--End Single Footer Widget-->
                 </div>
             </div>
         </div>
@@ -114,7 +141,7 @@
         <div class="container">
             <div class="footer-bottom__inner">
                 <div class="copyright-text">
-                    <p>© 2025 <a href="/">Translo,</a> All Rights Reserved.</p>
+                    <p>© 2025 <a href="/">Mata Raung,</a> All Rights Reserved.</p>
                 </div>
                 <div class="social-links">
                     <a href="#"><span class="icon-facebook"></span></a>
