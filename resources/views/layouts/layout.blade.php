@@ -12,13 +12,13 @@
     <!-- End preloader -->
 
     <!-- Start scrolltop -->
-    <x-scrolltop/>
+    <x-scrollTop/>
     <!-- End scrolltop -->
 
     <div class="fix">
 
         <!--Start Main Header Two -->
-        <?php 
+        <?php
 
             if (!isset($header)) {
                 ?>
@@ -29,7 +29,7 @@
         <!--End Main Header Two -->
 
         <!--Start Page Header-->
-        <?php 
+        <?php
 
             if (isset($title)) {
                 ?>
@@ -42,7 +42,7 @@
         @yield('content')
 
         <!--Start footer-->
-            <?php 
+            <?php
 
             if (!isset($footer)) {
                 ?>

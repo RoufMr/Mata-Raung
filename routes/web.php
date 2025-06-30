@@ -16,15 +16,31 @@ use App\Http\Controllers\Auth\SocialiteController;
 
 
     // home
-    Route::get('/', [HomeController::class, 'index']);
-    Route::get('/home/blog', [HomeController::class, 'blog']);
-    Route::get('/detail/{slug}', [HomeController::class, 'detail']);
-    Route::get('/home/team', [HomeController::class, 'team']);
-    Route::get('/detail_team/{slug}', [HomeController::class, 'detail_team'])->name('detail_team');
-    Route::get('/home/photo', [HomeController::class, 'photo']);
-    Route::get('/blog/standard', [HomeController::class, 'blog_standard']);
-    Route::get('/contact', [HomeController::class, 'contact']);
-    
+    Route::controller(HomeController::class)->group(function () {
+        Route::get('/', 'index');
+
+        Route::get('/home/blog', 'blog')->name('home.blog');
+        Route::get('/detail/{slug}', 'detail')->name('detail_blog');
+
+        Route::get('/home/about', 'about')->name('detail_about');
+
+        Route::get('/home/team', 'team')->name('home.team');
+        Route::get('/detail_team/{slug}', 'detail_team')->name('detail_team');
+
+        Route::get('/home/photo', 'photo')->name('home.photo');
+
+        Route::get('/blog/standard', 'blog_standard')->name('blogStandard');
+
+        Route::get('/contact', 'contact')->name('home.contact');
+
+        Route::get('/services', 'services')->name('services');
+        Route::get('/air-transport', 'airTransport')->name('airTransport');
+        Route::get('/cargo-transport', 'cargoTransport')->name('cargoTransport');
+        Route::get('/ocean-freight', 'oceanFreight')->name('oceanFreight');
+        Route::get('/rail-transport', 'railTransport')->name('railTransport');
+        Route::get('/road-transport', 'roadTransport')->name('roadTransport');
+        Route::get('/warehousing', 'warehousing')->name('warehousing');
+    });
 
 
     // blog
@@ -49,18 +65,18 @@ Route::prefix('pages')->group(function () {
 });
 
     // services
-Route::prefix('services')->group(function () {
-        Route::controller(ServicesController::class)->group(function () {
-            Route::get('/about', 'about')->name('about');
-            Route::get('/air-transport', 'airTransport')->name('airTransport');
-            Route::get('/cargo-transport', 'cargoTransport')->name('cargoTransport');
-            Route::get('/ocean-freight', 'oceanFreight')->name('oceanFreight');
-            Route::get('/rail-transport', 'railTransport')->name('railTransport');
-            Route::get('/road-transport', 'roadTransport')->name('roadTransport');
-            Route::get('/services', 'services')->name('services');
-            Route::get('/warehousing', 'warehousing')->name('warehousing');
-        });
-});
+// Route::prefix('services')->group(function () {
+//         Route::controller(ServicesController::class)->group(function () {
+//             // Route::get('/about', 'about')->name('about');
+//             Route::get('/air-transport', 'airTransport')->name('airTransport');
+//             Route::get('/cargo-transport', 'cargoTransport')->name('cargoTransport');
+//             Route::get('/ocean-freight', 'oceanFreight')->name('oceanFreight');
+//             Route::get('/rail-transport', 'railTransport')->name('railTransport');
+//             Route::get('/road-transport', 'roadTransport')->name('roadTransport');
+//             // Route::get('/services', 'services')->name('services');
+//             Route::get('/warehousing', 'warehousing')->name('warehousing');
+//         });
+// });
 
 
 Route::middleware('guest')->group(function () {
@@ -98,12 +114,12 @@ Route::middleware('auth')->group(function () {
      Route::post('/photo/store', [PhotoController::class, 'store'])->name('photo.store');
      Route::post('/photo/update/{id}', [PhotoController::class, 'update'])->name('photo.update');
      Route::post('/photo/destroy/{id}', [PhotoController::class, 'destroy'])->name('photo.destroy');
-    
-    
+
+
     Route::get('/about', [AboutController::class, 'index'])->name('about.index');
     Route::get('/about/edit', [AboutController::class, 'edit'])->name('about.edit');
     Route::put('/about/update', [AboutController::class, 'update'])->name('about.update');
-    
+
 });
 // Route::middleware(['auth'])->group(function () {
 // Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');

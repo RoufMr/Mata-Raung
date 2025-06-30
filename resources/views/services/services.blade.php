@@ -4,225 +4,164 @@
 $title='Our Services';
 $subTitle = 'Our Services';
 $css= '<link rel="stylesheet" href="' . asset('assets/css/color-3.css') . '" />';
-$script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>';  
+$script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>';
 @endphp
 
 @section('content')
 
-        <!--Start Services Three-->
-        <section class="services-three services-three--services">
+        <!--Start Pricing One -->
+        <section class="pricing-one">
+            <div class="pricing-one__bg" style="background-image: url('{{ asset('assets/img/background/pricing-v1-bg.jpg') }}');"></div>
             <div class="container">
-                <div class="services-three--services__top">
-                    <div class="title-box">
-                        <h2>We Provide all Kinds of <br> Logistics Service</h2>
-                    </div>
 
-                    <div class="text-box">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br> of tempor
-                            incididunt ut labore et dolore magna</p>
+                <div class="sec-title-style3 text-center">
+                    <div class="sub-title center">
+                        <div class="icon">
+                            <img src="{{ asset('assets/img/icon/title-marker-4.png') }}" alt="">
+                        </div>
+                        <h5>Price Table</h5>
                     </div>
+                    <h2>Our Best Pricing Plan</h2>
                 </div>
 
+
                 <div class="row">
-                    <!--Start Services Three Single-->
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="services-three__single">
-                            <div class="services-three__single-img">
-                                <div class="inner">
-                                    <img src="{{ asset('assets/img/service/service-v3-img1.jpg') }}" alt="">
-                                    <div class="icon-box">
-                                        <span class="icon-road-transport t5"></span>
-                                    </div>
+                    <!--Start Pricing One Single-->
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="pricing-one__single text-center">
+                            <div class="pricing-one__single-bg" style="background-image: url('{{ asset('assets/img/resource/nyobak.jpg') }}');"></div>
+                            <div class="table-header">
+                                <div class="img-box">
+                                    <img src="{{ asset('assets/img/resource/nyobak.jpg') }}" alt="">
                                 </div>
                             </div>
 
-                            <div class="services-three__single-content">
-                                <div class="services-three__single-content-inner">
-                                    <h2><a href="{{ route('roadTransport') }}">Road Transport</a></h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing sed eiusmod</p>
-                                    <div class="count-box">
-                                        01
-                                    </div>
-                                    <div class="btn-box">
-                                        <a href="{{ route('roadTransport') }}">Read More <i class="icon-right-arrow-5"></i></a>
-
-                                        <div class="number-box">
-                                            01
-                                        </div>
-                                    </div>
+                            <div class="table-content">
+                                <div class="table-content__top">
+                                    <h3>Roade Freight</h3>
+                                    <h2>$39 <span>/ 256kg</span></h2>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Services Three Single-->
 
-                    <!--Start Services Three Single-->
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="services-three__single">
-                            <div class="services-three__single-img">
-                                <div class="inner">
-                                    <img src="{{ asset('assets/img/service/service-v3-img2.jpg') }}" alt="">
-                                    <div class="icon-box">
-                                        <span class="icon-ocean-freight1"></span>
-                                    </div>
-                                </div>
+                                <ul>
+                                    <li>
+                                        <p><span class="icon-check"></span>Single Truck</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="icon-check"></span>Full Insurance</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="icon-check"></span>500 Km</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="icon-check"></span>Real-time rate shiping</p>
+                                    </li>
+                                </ul>
                             </div>
 
-                            <div class="services-three__single-content">
-                                <div class="services-three__single-content-inner">
-                                    <h2><a href="{{ route('roadTransport') }}">Ocean Freight</a></h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing sed eiusmod</p>
-                                    <div class="count-box">
-                                        02
-                                    </div>
-                                    <div class="btn-box">
-                                        <a href="{{ route('roadTransport') }}">Read More <i class="icon-right-arrow-5"></i></a>
-
-                                        <div class="number-box">
-                                            02
-                                        </div>
-                                    </div>
+                            <div class="table-footer">
+                                <div class="btn-box">
+                                    <a class="thm-btn" href="#">
+                                        <span class="txt">Get a Quote</span> <i class="icon-right-arrow"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--End Services Three Single-->
+                    <!--End Pricing One Single-->
 
-                    <!--Start Services Three Single-->
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="services-three__single">
-                            <div class="services-three__single-img">
-                                <div class="inner">
-                                    <img src="{{ asset('assets/img/service/service-v3-img3.jpg') }}" alt="">
-                                    <div class="icon-box">
-                                        <span class="icon-experience"></span>
-                                    </div>
+                    <!--Start Pricing One Single-->
+                    <div class="col-xl-4 col-lg-4 wow fadeInDown" data-wow-delay=".3s">
+                        <div class="pricing-one__single text-center">
+                            <div class="pricing-one__single-bg" style="background-image: url('{{ asset('assets/img/resource/nyobak.jpg') }}');"></div>
+                            <div class="table-header">
+                                <div class="img-box">
+                                    <img src="{{ asset('assets/img/resource/nyobak.jpg') }}" alt="">
                                 </div>
                             </div>
 
-                            <div class="services-three__single-content">
-                                <div class="services-three__single-content-inner">
-                                    <h2><a href="{{ route('roadTransport') }}">Cargo Container</a></h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing sed eiusmod</p>
-                                    <div class="count-box">
-                                        03
-                                    </div>
-                                    <div class="btn-box">
-                                        <a href="{{ route('roadTransport') }}">Read More <i class="icon-right-arrow-5"></i></a>
-
-                                        <div class="number-box">
-                                            03
-                                        </div>
-                                    </div>
+                            <div class="table-content">
+                                <div class="table-content__top">
+                                    <h3>Air Freight</h3>
+                                    <h2>$70 <span>/ 300kg</span></h2>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Services Three Single-->
 
-                    <!--Start Services Three Single-->
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="services-three__single">
-                            <div class="services-three__single-img">
-                                <div class="inner">
-                                    <img src="{{ asset('assets/img/service/service-v3-img4.jpg') }}" alt="">
-                                    <div class="icon-box">
-                                        <span class="icon-air-transport"></span>
-                                    </div>
-                                </div>
+                                <ul>
+                                    <li>
+                                        <p><span class="icon-check"></span>Single Truck</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="icon-check"></span>Full Insurance</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="icon-check"></span>500 Km</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="icon-check"></span>Real-time rate shiping</p>
+                                    </li>
+                                </ul>
                             </div>
 
-                            <div class="services-three__single-content">
-                                <div class="services-three__single-content-inner">
-                                    <h2><a href="{{ route('roadTransport') }}">Air Transport</a></h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing sed eiusmod</p>
-                                    <div class="count-box">
-                                        04
-                                    </div>
-                                    <div class="btn-box">
-                                        <a href="{{ route('roadTransport') }}">Read More <i class="icon-right-arrow-5"></i></a>
-
-                                        <div class="number-box">
-                                            04
-                                        </div>
-                                    </div>
+                            <div class="table-footer">
+                                <div class="btn-box">
+                                    <a class="thm-btn" href="#">
+                                        <span class="txt">Get a Quote</span> <i class="icon-right-arrow"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--End Services Three Single-->
+                    <!--End Pricing One Single-->
 
-                    <!--Start Services Three Single-->
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="services-three__single">
-                            <div class="services-three__single-img">
-                                <div class="inner">
-                                    <img src="{{ asset('assets/img/service/service-v3-img5.jpg') }}" alt="">
-                                    <div class="icon-box">
-                                        <span class="icon-airplane"></span>
-                                    </div>
+                    <!--Start Pricing One Single-->
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="pricing-one__single text-center">
+                            <div class="pricing-one__single-bg" style="background-image: url('{{ asset('assets/img/resource/nyobak.jpg') }}');"></div>
+                            <div class="table-header">
+                                <div class="img-box">
+                                    <img src="{{ asset('assets/img/resource/nyobak.jpg') }}" alt="">
                                 </div>
                             </div>
 
-                            <div class="services-three__single-content">
-                                <div class="services-three__single-content-inner">
-                                    <h2><a href="{{ route('roadTransport') }}">Rail Transport</a></h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing sed eiusmod</p>
-                                    <div class="count-box">
-                                        05
-                                    </div>
-                                    <div class="btn-box">
-                                        <a href="{{ route('roadTransport') }}">Read More <i class="icon-right-arrow-5"></i></a>
-
-                                        <div class="number-box">
-                                            05
-                                        </div>
-                                    </div>
+                            <div class="table-content">
+                                <div class="table-content__top">
+                                    <h3>Cargo Transport</h3>
+                                    <h2>$120 <span>/ 500kg</span></h2>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Services Three Single-->
 
-                    <!--Start Services Three Single-->
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="services-three__single">
-                            <div class="services-three__single-img">
-                                <div class="inner">
-                                    <img src="{{ asset('assets/img/service/service-v3-img6.jpg') }}" alt="">
-                                    <div class="icon-box">
-                                        <span class="icon-warehousing"></span>
-                                    </div>
-                                </div>
+                                <ul>
+                                    <li>
+                                        <p><span class="icon-check"></span>Single Truck</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="icon-check"></span>Full Insurance</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="icon-check"></span>500 Km</p>
+                                    </li>
+                                    <li>
+                                        <p><span class="icon-check"></span>Real-time rate shiping</p>
+                                    </li>
+                                </ul>
                             </div>
 
-                            <div class="services-three__single-content">
-                                <div class="services-three__single-content-inner">
-                                    <h2><a href="{{ route('roadTransport') }}">Warehousing</a></h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing sed eiusmod</p>
-                                    <div class="count-box">
-                                        06
-                                    </div>
-                                    <div class="btn-box">
-                                        <a href="{{ route('roadTransport') }}">Read More <i class="icon-right-arrow-5"></i></a>
-
-                                        <div class="number-box">
-                                            06
-                                        </div>
-                                    </div>
+                            <div class="table-footer">
+                                <div class="btn-box">
+                                    <a class="thm-btn" href="#">
+                                        <span class="txt">Get a Quote</span> <i class="icon-right-arrow"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--End Services Three Single-->
+                    <!--End Pricing One Single-->
                 </div>
             </div>
         </section>
-        <!--End Services Three-->
+        <!--End Pricing One -->
 
         <!--Start Work process Two-->
         <section class="work-process-two">
-            <div class="work-process-two__bg" style="background-image: url('{{ asset('assets/img/background/work-process-v2-bg.jpg') }}');"></div>
+            <div class="work-process-two__bg" style="background-image: url('{{ asset('assets/img/footer/111.jpg') }}');"></div>
             <div class="container">
                 <div class="sec-title-style3 text-center">
                     <div class="sub-title center">
@@ -423,184 +362,10 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
         </section>
         <!--End Why Choose Two-->
 
-        <!--Start Pricing One -->
-        <section class="pricing-one">
-            <div class="pricing-one__bg" style="background-image: url('{{ asset('assets/img/background/pricing-v1-bg.jpg') }}');"></div>
-            <div class="container">
 
-                <div class="sec-title-style3 text-center">
-                    <div class="sub-title center">
-                        <div class="icon">
-                            <img src="{{ asset('assets/img/icon/title-marker-4.png') }}" alt="">
-                        </div>
-                        <h5>Price Table</h5>
-                    </div>
-                    <h2>Our Best Pricing Plan</h2>
-                </div>
-
-
-                <div class="row">
-                    <!--Start Pricing One Single-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
-                        <div class="pricing-one__single text-center">
-                            <div class="pricing-one__single-bg" style="background-image: url('{{ asset('assets/img/resource/pricing-v1-single-bg.jpg') }}');"></div>
-                            <div class="table-header">
-                                <div class="img-box">
-                                    <img src="{{ asset('assets/img/resource/pricing-v1-img1.jpg') }}" alt="">
-                                </div>
-                            </div>
-
-                            <div class="table-content">
-                                <div class="table-content__top">
-                                    <h3>Roade Freight</h3>
-                                    <h2>$39 <span>/ 256kg</span></h2>
-                                </div>
-
-                                <ul>
-                                    <li>
-                                        <p><span class="icon-check"></span>Single Truck</p>
-                                    </li>
-                                    <li>
-                                        <p><span class="icon-check"></span>Full Insurance</p>
-                                    </li>
-                                    <li>
-                                        <p><span class="icon-check"></span>500 Km</p>
-                                    </li>
-                                    <li>
-                                        <p><span class="icon-check"></span>Real-time rate shiping</p>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="table-footer">
-                                <div class="btn-box">
-                                    <a class="thm-btn" href="#">
-                                        <span class="txt">Get a Quote</span> <i class="icon-right-arrow"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Pricing One Single-->
-
-                    <!--Start Pricing One Single-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInDown" data-wow-delay=".3s">
-                        <div class="pricing-one__single text-center">
-                            <div class="pricing-one__single-bg" style="background-image: url('{{ asset('assets/img/resource/pricing-v1-single-bg.jpg') }}');"></div>
-                            <div class="table-header">
-                                <div class="img-box">
-                                    <img src="{{ asset('assets/img/resource/pricing-v1-img2.jpg') }}" alt="">
-                                </div>
-                            </div>
-
-                            <div class="table-content">
-                                <div class="table-content__top">
-                                    <h3>Air Freight</h3>
-                                    <h2>$70 <span>/ 300kg</span></h2>
-                                </div>
-
-                                <ul>
-                                    <li>
-                                        <p><span class="icon-check"></span>Single Truck</p>
-                                    </li>
-                                    <li>
-                                        <p><span class="icon-check"></span>Full Insurance</p>
-                                    </li>
-                                    <li>
-                                        <p><span class="icon-check"></span>500 Km</p>
-                                    </li>
-                                    <li>
-                                        <p><span class="icon-check"></span>Real-time rate shiping</p>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="table-footer">
-                                <div class="btn-box">
-                                    <a class="thm-btn" href="#">
-                                        <span class="txt">Get a Quote</span> <i class="icon-right-arrow"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Pricing One Single-->
-
-                    <!--Start Pricing One Single-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
-                        <div class="pricing-one__single text-center">
-                            <div class="pricing-one__single-bg" style="background-image: url('{{ asset('assets/img/resource/pricing-v1-single-bg.jpg') }}');"></div>
-                            <div class="table-header">
-                                <div class="img-box">
-                                    <img src="{{ asset('assets/img/resource/pricing-v1-img3.jpg') }}" alt="">
-                                </div>
-                            </div>
-
-                            <div class="table-content">
-                                <div class="table-content__top">
-                                    <h3>Cargo Transport</h3>
-                                    <h2>$120 <span>/ 500kg</span></h2>
-                                </div>
-
-                                <ul>
-                                    <li>
-                                        <p><span class="icon-check"></span>Single Truck</p>
-                                    </li>
-                                    <li>
-                                        <p><span class="icon-check"></span>Full Insurance</p>
-                                    </li>
-                                    <li>
-                                        <p><span class="icon-check"></span>500 Km</p>
-                                    </li>
-                                    <li>
-                                        <p><span class="icon-check"></span>Real-time rate shiping</p>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="table-footer">
-                                <div class="btn-box">
-                                    <a class="thm-btn" href="#">
-                                        <span class="txt">Get a Quote</span> <i class="icon-right-arrow"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Pricing One Single-->
-                </div>
-            </div>
-        </section>
-        <!--End Pricing One -->
 
         <!--Start Cta Three-->
-        <section class="cta-two style3 style4">
-            <div class="container">
-                <div class="cta-two__inner">
-                    <div class="shape1"><img src="{{ asset('assets/img/shape/cta-v3-shape1.png') }}" alt=""></div>
-                    <div class="shape2"><img src="{{ asset('assets/img/shape/cta-v3-shape2.png') }}" alt=""></div>
-                    <div class="shape3 float-bob-x"><img src="{{ asset('assets/img/shape/cta-v3-shape3.png') }}" alt=""></div>
-                    <div class="cta-two__inner-box">
-                        <div class="sec-title-style3">
-                            <div class="sub-title">
-                                <div class="icon">
-                                    <img src="{{ asset('assets/img/icon/title-marker-3.png') }}" alt="">
-                                </div>
-                                <h5>Get in touch</h5>
-                            </div>
-                            <h2>Looking for the best logistics <br>
-                                transport services</h2>
-                        </div>
 
-                        <div class="btn-box">
-                            <a class="thm-btn" href="#">
-                                <span class="txt">Request a Quote</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <!--End Cta Three-->
-        
+
 @endsection

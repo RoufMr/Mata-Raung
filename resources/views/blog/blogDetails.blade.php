@@ -4,7 +4,7 @@
 $title='Blog Details';
 $subTitle = 'Blog Details';
 $css= '<link rel="stylesheet" href="' . asset('assets/css/color-3.css') . '" />';
-$script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>';  
+$script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>';
 @endphp
 
 @section('content')
@@ -33,44 +33,6 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
 
                             <p>{!! $artikel->desc !!}</p>
 
-
-                            <div class="blog-details__content-text1 text-center">
-                                <div class="big-icon">
-                                    <span class="icon-quote11"></span>
-                                </div>
-                                <p>“Readable and Packages editors now use Lorem Ipsum as their default <br>
-                                    model textlayout point of using the some is that it has a more”</p>
-                                <div class="author-box">
-                                    <div class="icon-box">
-                                        <span class="icon-user1"></span>
-                                    </div>
-                                    <div class="text-box">
-                                        <p>Rebecca Tylor</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="blog-details__content-text2">
-                                <div class="title-box">
-                                    <h2>Safest Logistics Solutions Provider <br> With Integrity</h2>
-                                    <p>Readable and Packages editors now use Lorem Ipsum as their default model
-                                        textlayout. The point of using the some is that it has a more-or-less
-                                        normal distribution of letters as opposed to using.</p>
-                                </div>
-
-                                <div class="blog-details__content-text2-img">
-                                    <div class="shape1"><img src="{{ asset('assets/img/shape/blog-details-shape1.png') }}" alt=""></div>
-                                    <img src="{{ asset('assets/img/blog/blog-details-img2.jpg') }}" alt="">
-                                    <div class="video-btn">
-                                        <a href="https://www.youtube.com/watch?v=6mkoGSqTqFI" class="video-one__video-btn video-popup">
-                                            <span class="txt">Play</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <p class="text1">Packages and web page editors now use Lorem Ipsum as their
-                                    default model textlayout. The point of using are Ipsum is that it has a
-                                    more-or-less normal distribution of letterng.</p>
-                            </div>
 
                             <div class="blog-details__tag-share">
                                 <div class="blog-details__tag-share-tag">
@@ -235,18 +197,19 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
                             <h2>Latest Post</h2>
                         </div>
                         <ul class="sidebar__latest-post-list">
+                            @foreach($otherBlog as $index => $otherBlog)
                             <li>
                                 <div class="img-box">
-                                    <img src="{{ asset('assets/img/blog/sidebar-img1.jpg') }}" alt="">
+                                    <img src="{{ asset('storage/artikel/'.$otherBlog->image) }}" alt="{{ $otherBlog->judul }}">
                                 </div>
 
                                 <div class="text-box">
                                     <p>Air Freight - Jun 13, 2025</p>
-                                    <h3><a href="#">Advanced Service by <br> Rail Transport</a></h3>
+                                    <h3><a href="{{ route('detail_blog', $otherBlog->slug) }}">{{Str::limit($otherBlog->judul,15) }}</a></h3>
                                 </div>
                             </li>
 
-                            <li>
+                            {{-- <li>
                                 <div class="img-box">
                                     <img src="{{ asset('assets/img/blog/sidebar-img2.jpg') }}" alt="">
                                 </div>
@@ -277,13 +240,14 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
                                     <p>Air Freight - Jun 13, 2025</p>
                                     <h3><a href="#">Advanced Service by <br> Rail Transport</a></h3>
                                 </div>
-                            </li>
+                            </li> --}}
+                            @endforeach
                         </ul>
                     </div>
                     <!--End Sidebar Single-->
 
                     <!--Start Sidebar Single-->
-                    <div class="sidebar__single sidebar__services wow fadeInUp" data-wow-delay=".3s">
+                    {{-- <div class="sidebar__single sidebar__services wow fadeInUp" data-wow-delay=".3s">
                         <div class="title-box">
                             <h2>Categories</h2>
                         </div>
@@ -295,7 +259,7 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
                             <li><a href="#">Rail Transport <span class="icon-right-arrow-5"></span></a></li>
                             <li><a href="#">Warehousing <span class="icon-right-arrow-5"></span></a></li>
                         </ul>
-                    </div>
+                    </div> --}}
                     <!--End Sidebar Single-->
 
                     <!--Start Sidebar Single-->
@@ -324,7 +288,7 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
 <!--End Blog Details-->
 
 <!--Start Cta Three-->
-<section class="cta-two style3 style4">
+{{-- <section class="cta-two style3 style4">
     <div class="container">
         <div class="cta-two__inner">
             <div class="shape1"><img src="{{ asset('assets/img/shape/cta-v3-shape1.png') }}" alt=""></div>
@@ -350,7 +314,7 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!--End Cta Three-->
 
 @endsection

@@ -108,7 +108,7 @@
                                                         </div>
                                                         <div class="text-box">
                                                             <p>Address</p>
-                                                            <h4>Sukojati, Blimbingsari </h4>
+                                                            <h4><a href="{{route('home.contact')}}">Sukojati, Blimbingsari </a></h4>
                                                         </div>
                                                     </li>
 
@@ -158,12 +158,16 @@
                                                 <!-- <li class="active menu-item-has-children"><a href="#">Home</a>
                                                     <ul class="sub-menu">
                                                         <li><a href="/">Home One</a></li>
-                                            
+
                                                     </ul>
                                                 </li> -->
                                                 <li><a href="/">Home</a></li>
-                                                <li><a href="{{ route('about') }}">About</a></li>
-                                                <li class="menu-item-has-children"><a href="#">Services</a>
+                                                <li><a href="{{ route('detail_about') }}">About</a></li>
+                                                <li><a href="{{ route('services') }}">Services</a></li>
+                                                <li><a href="{{ route('home.team') }}">Team</a></li>
+                                                <li><a href="{{ route('home.blog') }}">Blog</a></li>
+                                                <li><a href="{{ route('home.photo') }}">Gallery</a></li>
+                                                {{-- <li class="menu-item-has-children"><a href="#">Services</a>
                                                     <ul class="sub-menu">
                                                         <li><a href="{{ route('services') }}">Services</a></li>
                                                         <li><a href="{{ route('roadTransport') }}">Road Transport</a>
@@ -178,8 +182,8 @@
                                                         </li>
                                                         <li><a href="{{ route('warehousing') }}">Warehousing</a></li>
                                                     </ul>
-                                                </li>
-                                                <li class="menu-item-has-children"><a href="#">Pages</a>
+                                                </li> --}}
+                                                {{-- <li class="menu-item-has-children"><a href="#">Pages</a>
                                                     <ul class="sub-menu">
                                                         <li><a href="{{ route('team') }}">Team</a></li>
                                                         <li><a href="">Team Details</a>
@@ -189,22 +193,22 @@
                                                                 Details</a></li>
                                                         <li><a href="{{ route('pagesError') }}">404</a></li>
                                                     </ul>
-                                                </li>
-                                                <li class="menu-item-has-children"><a href="#">Blog</a>
+                                                </li> --}}
+                                                {{-- <li class="menu-item-has-children"><a href="#">Blog</a>
                                                     <ul class="sub-menu">
                                                         <li><a href="/home/blog">Blog</a></li>
-                                                        <li><a href="/home/standard">Blog standard</a>
+                                                        <li><a href="{{route('blogStandard')}}">Blog standard</a>
                                                         </li>
                                                         <li><a href="">Blog Details</a>
                                                         </li>
                                                     </ul>
-                                                </li>
+                                                </li> --}}
                                                 <li><a href="/contact">Contact</a></li>
                                             </ul>
                                         </div>
                                     </div>
 
-                                    <div class="main-header-three__bottom-right">
+                                    {{-- <div class="main-header-three__bottom-right">
                                         <div class="search-box">
                                             <a href="#" class="main-menu__search search-toggler icon-magnifying-glass"></a>
                                         </div>
@@ -218,7 +222,7 @@
                                                 <span class="txt">Get Free Quote</span>
                                             </a>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
@@ -231,7 +235,7 @@
                 <nav class="menu-box">
                     <div class="close-btn"><i class="fas fa-times"></i></div>
                     <div class="nav-logo">
-                        <a href="/"><img src="{{ asset('assets/img/resource/mobile-menu-logo2.png') }}" alt="Logo"></a>
+                        <a href="/"><img src="{{ asset('assets/img/resource/logo-mr-nobg2.png') }}" alt="Logo"></a>
                     </div>
                     <div class="menu-outer">
                         <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->

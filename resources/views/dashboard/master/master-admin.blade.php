@@ -337,14 +337,14 @@
                             <li class="nav-item dropdown header-profile">
                                 <a class="nav-link" href="javascript:void(0);" role="button"
                                     data-bs-toggle="dropdown">
-                                
+
                                     <!-- <img class="avatar-lg rounded-circle img-thumbnail" src=""
                                         alt="" width="50px" /> -->
-                                
+
                                     <img class="avatar-lg rounded-circle img-thumbnail"
                                     src="{{ asset('sipenmaru/images/ava.png') }}" alt=""
                                         width="50px" />
-                                
+
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end">
                                     <a href="profile" class="dropdown-item ai-icon">
@@ -359,7 +359,7 @@
                                     <form action="{{ route('logout') }}" method="POST" class="d-inline">
     @csrf
     <button type="submit" class="dropdown-item ai-icon" style="background: none; border: none; width: 100%; text-align: left;">
-        <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" 
+        <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger"
              width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
@@ -387,23 +387,23 @@
         <div class="dlabnav">
 
             <div class="dlabnav-scroll">
-                
+
                     <div class="sidebar-user text-center">
 
                         <a href="profile">
-                                
+
                                     <!-- <img class="avatar-lg rounded-circle img-thumbnail" src=""
                                         alt="" width="75px" /> -->
-                                
+
                                     <img class="avatar-lg rounded-circle img-thumbnail"
                                     src="{{ asset('sipenmaru/images/ava.png') }}" alt=""
                                         width="75px" />
-                                
+
                         <div class="badge-bottom"><span class="badge badge-primary">
-                            
-                        
+
+
                             Administrator
-                        
+
                             </span>
                         </div>
                             <h6 class="mt-3 f-14 f-w-600">
@@ -413,18 +413,18 @@
                             </h6>
                         </a>
                     </div>
-                
-                <div class="side-bar-profile">
+
+                {{-- <div class="side-bar-profile">
                     <div class="d-flex align-items-center justify-content-between mb-3">
                         <div class="side-bar-profile-img">
-                                
+
                                     <img class="avatar-lg rounded-circle img-thumbnail" src=""
                                         alt=""  />
-                                
+
                                     <img class="avatar-lg rounded-circle img-thumbnail"
                                     src="{{ asset('sipenmaru/images/ava.png') }}" alt=""
                                          />
-                                
+
                             <!--<img src="images/user.jpg" alt="">-->
                         </div>
                         <div class="profile-info1">
@@ -435,7 +435,7 @@
                             <i class="fas fa-caret-down scale5 text-light"></i>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 @section('menu')@show
 
 
@@ -774,7 +774,7 @@
                 alert('Status berhasil diubah');
             }
         });
-   
+
 
     });
 </script>

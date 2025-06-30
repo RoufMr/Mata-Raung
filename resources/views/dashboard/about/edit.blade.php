@@ -30,7 +30,7 @@
         <form action="{{ route('about.update') }}" method="POST" enctype="multipart/form-data">
             @method('put')
             @csrf
-            
+
             <!-- Judul 1 dan Image 1 -->
             <div class="row">
                 <div class="col-md-6 mb-4">
@@ -59,7 +59,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Deskripsi 1 dengan WYSIWYG -->
             <div class="mb-4">
                 <div class="card shadow">
@@ -74,7 +74,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Judul 2 dan Image 2 -->
             <div class="row">
                 <div class="col-md-6 mb-4">
@@ -94,7 +94,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-6 mb-4">
                     <div class="card shadow">
                         <div class="card-body">
@@ -113,7 +113,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Deskripsi 2 dengan WYSIWYG -->
             <div class="mb-4">
                 <div class="card shadow">
@@ -128,7 +128,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Visi dan Misi -->
             <div class="row">
                 <div class="col-md-6 mb-4">
@@ -143,7 +143,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-6 mb-4">
                     <div class="card shadow">
                         <div class="card-body">
@@ -156,8 +156,119 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Telepon/WhatsApp -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <label>Nomor WhatsApp</label>
+                            <input type="text" class="form-control @error('telepon') is-invalid @enderror" name="telepon"
+                                value="{{ old('telepon', $about->telepon) }}">
+                            @error('telepon')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alamat -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <label>Alamat</label>
+                            <textarea class="form-control @error('alamat') is-invalid @enderror" name="alamat" rows="3">{{ old('alamat', $about->alamat) }}</textarea>
+                            @error('alamat')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <label>Email</label>
+                            <input type="email" class="form-control @error('email') is-invalid @enderror" name="email"
+                                value="{{ old('email', $about->email) }}">
+                            @error('email')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instagram -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <label>Instagram</label>
+                            <input type="url" class="form-control @error('instagram') is-invalid @enderror" name="instagram"
+                                value="{{ old('instagram', $about->instagram) }}" placeholder="https://instagram.com/username">
+                            @error('instagram')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTube -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <label>YouTube</label>
+                            <input type="url" class="form-control @error('youtube') is-invalid @enderror" name="youtube"
+                                value="{{ old('youtube', $about->youtube) }}" placeholder="https://youtube.com/username">
+                            @error('youtube')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TikTok -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <label>TikTok</label>
+                            <input type="url" class="form-control @error('tiktok') is-invalid @enderror" name="tiktok"
+                                value="{{ old('tiktok', $about->tiktok) }}" placeholder="https://tiktok.com/@username">
+                            @error('tiktok')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Facebook -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <label>Facebook</label>
+                            <input type="url" class="form-control @error('facebook') is-invalid @enderror" name="facebook"
+                                value="{{ old('facebook', $about->facebook) }}" placeholder="https://facebook.com/username">
+                            @error('facebook')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Waktu Layanan -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <label>Waktu Layanan</label>
+                            <input type="text" class="form-control @error('waktu_layanan') is-invalid @enderror" name="waktu_layanan"
+                                value="{{ old('waktu_layanan', $about->waktu_layanan) }}" placeholder="Contoh: Senin-Jumat, 08:00-17:00">
+                            @error('waktu_layanan')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
             </div>
-            
+
             <div class="form-group text-center">
                 <button type="submit" class="btn btn-primary btn-lg">
                     <i class="fas fa-save"></i> Simpan Perubahan

@@ -169,18 +169,20 @@
                         <div class="about-one__img clearfix">
                             <div class="shape1 float-bob-x"><img src="{{ asset('asset/img/shape/about-v1-shape1.png') }}" alt="">
                             </div>
-                            <div class="inner clearfix">
-                                <img class="float-bob-y" src="{{ asset('storage/about/' . $about->image1) }}" alt="">
+                            <div class="inner clearfix"><a class="photo-home-popup gallery-item" href="{{ asset('storage/about/'.$about->image1) }}" title="">
+                                <img class="photo-home-popup float-bob-y" src="{{ asset('storage/about/' . $about->image1) }}" alt="">
+                            </a>
                             </div>
-                            <div class="btn-box">
+                            {{-- <div class="btn-box">
                                 <div class="round-text">
                                     <div class="curved-circle rotate-me">
-                                        Mata Raung Indonesia - Since 2020 - 
+                                        Mata Raung Indonesia - Since 2020 -
                                     </div>
-                                    <a href="#">Read <br>More</a>
+                                    <a href="{{route('detail_about')}}">Read <br>More</a>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
+
                     </div>
 
                     <div class="col-xl-7">
@@ -198,9 +200,17 @@
                                 </div>
                             </div>
 
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="about-one__content-mission">
                             <div class="about-one__content-features">
                                 <ul>
-                                    <li class="wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                    <li class="wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
                                         <div class="inner">
                                             <div class="icon-box">
                                                 <img src="{{ asset('assets/img/icon/about/worldwide-delivery.png') }}" alt="#">
@@ -211,6 +221,15 @@
                                             </div>
                                         </div>
                                     </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <div class="about-one__content-mission">
+                            <div class="about-one__content-features">
+                                <ul>
 
                                     <li class="wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
                                         <div class="inner">
@@ -227,288 +246,12 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
                 @endforeach
             </div>
         </div>
         <!--End About One-->
-
-        <!--Start Service One -->
-        <section class="service-one">
-            <div class="container">
-                <div class="service-one__top">
-                    <div class="sec-title">
-                        <div class="sub-title">
-                            <h5><span class="icon-right-arrow-1"></span> Our Services</h5>
-                        </div>
-                        <h2>Fast and professional <br> Logistic services</h2>
-                    </div>
-
-                    <div class="btn-box">
-                        <a class="thm-btn" href="{{ route('services') }}">
-                            <span class="txt">View All Service</span> <i class="icon-right-arrow"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="thm-swiper__slider swiper-container" data-swiper-options='{"spaceBetween": 50,
-                    "slidesPerView": 3,
-                    "loop": true,
-                    "pagination": {
-                        "el": "#service-one__pagination",
-                        "type": "bullets",
-                        "clickable": true
-                        },
-                    "navigation": {
-                        "nextEl": "#team-one__swiper-button-next",
-                        "prevEl": "#team-one__swiper-button-prev"
-                    },
-                    "autoplay": { "delay": 5000 },
-                    "breakpoints": {
-                        "0": {
-                            "spaceBetween": 30,
-                            "slidesPerView": 1
-                        },
-                        "375": {
-                            "spaceBetween": 30,
-                            "slidesPerView": 1
-                        },
-                        "575": {
-                            "spaceBetween": 30,
-                            "slidesPerView": 1
-                        },
-                        "768": {
-                            "spaceBetween": 30,
-                            "slidesPerView": 2
-                        },
-                        "992": {
-                            "spaceBetween": 30,
-                            "slidesPerView": 3
-                        },
-                        "1200": {
-                            "spaceBetween": 50,
-                            "slidesPerView": 3
-                        }
-                    }
-                }'>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <!--Start Service One Single-->
-                            <div class="service-one__single">
-                                <div class="service-one__single-img">
-                                    <div class="inner">
-                                        <img src="{{ asset('assets/img/service/service-one__img1.jpg') }}" alt="#">
-                                        <div class="overlay-icon">
-                                            <img src="{{ asset('assets/img/icon/services/air-freight.png') }}" alt="#">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="service-one__single-content">
-                                    <h3><a href="{{ route('roadTransport') }}">Air Freight</a></h3>
-                                    <p>Following the quality of our service <br> thus having gained trust</p>
-                                    <div class="btn-box">
-                                        <a href="{{ route('roadTransport') }}">Read More <span class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End Service One Single-->
-                        </div>
-
-                        <div class="swiper-slide">
-                            <!--Start Service One Single-->
-                            <div class="service-one__single">
-                                <div class="service-one__single-img">
-                                    <div class="inner">
-                                        <img src="{{ asset('assets/img/service/service-one__img2.jpg') }}" alt="#">
-                                        <div class="overlay-icon">
-                                            <img src="{{ asset('assets/img/icon/services/ocean-freight.png') }}" alt="#">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="service-one__single-content">
-                                    <h3><a href="{{ route('roadTransport') }}">Ocean Freight</a></h3>
-                                    <p>Following the quality of our service <br> thus having gained trust</p>
-                                    <div class="btn-box">
-                                        <a href="{{ route('roadTransport') }}">Read More <span class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End Service One Single-->
-                        </div>
-
-                        <div class="swiper-slide">
-                            <!--Start Service One Single-->
-                            <div class="service-one__single">
-                                <div class="service-one__single-img">
-                                    <div class="inner">
-                                        <img src="{{ asset('assets/img/service/service-one__img3.jpg') }}" alt="#">
-                                        <div class="overlay-icon">
-                                            <img src="{{ asset('assets/img/icon/services/road-freight.png') }}" alt="#">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="service-one__single-content">
-                                    <h3><a href="{{ route('roadTransport') }}">Road Freight</a></h3>
-                                    <p>Following the quality of our service <br> thus having gained trust</p>
-                                    <div class="btn-box">
-                                        <a href="{{ route('roadTransport') }}">Read More <span class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End Service One Single-->
-                        </div>
-
-                        <div class="swiper-slide">
-                            <!--Start Service One Single-->
-                            <div class="service-one__single">
-                                <div class="service-one__single-img">
-                                    <div class="inner">
-                                        <img src="{{ asset('assets/img/service/service-one__img2.jpg') }}" alt="#">
-                                        <div class="overlay-icon">
-                                            <img src="{{ asset('assets/img/icon/services/ocean-freight.png') }}" alt="#">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="service-one__single-content">
-                                    <h3><a href="{{ route('roadTransport') }}">Ocean Freight</a></h3>
-                                    <p>Following the quality of our service <br> thus having gained trust</p>
-                                    <div class="btn-box">
-                                        <a href="{{ route('roadTransport') }}">Read More <span class="icon-right-arrow"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End Service One Single-->
-                        </div>
-                    </div>
-                </div>
-                <!-- If we need navigation buttons -->
-                <div class="swiper-pagination" id="service-one__pagination"></div>
-            </div>
-        </section>
-        <!--End Service One-->
-
-        <!--Start Video One-->
-        <section class="video-one">
-            <div class="container">
-                <div class="video-one__inner" style="background-image: url('{{ asset('assets/img/background/video-v1-bg.jpg') }}');">
-                    <div class="video-one__video">
-                        <a href="https://www.youtube.com/watch?v=6mkoGSqTqFI" class="video-one__video-btn video-popup">
-                            <span class="txt">Play</span>
-                        </a>
-                    </div>
-                    <div class="overlay-text">
-                        <h3><a href="#">Watch Our Intro</a></h3>
-                        <div class="icon">
-                            <a href="#"><span class="icon-right-arrow-2"></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--End Video One-->
-
-        <!--Start Working Process One-->
-        <section class="working-process-one">
-            <div class="working-process-one__bg" style="background-image: url('{{ asset('assets/img/background/working-process-v1-bg.jpg') }}');"></div>
-            <div class="container">
-                <div class="sec-title text-center">
-                    <div class="sub-title">
-                        <h5><span class="icon-right-arrow-1"></span> Check our steps</h5>
-                    </div>
-                    <h2>Our Freight Working Process</h2>
-                </div>
-                <div class="row">
-                    <!--Start Working Process One Single-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <div class="working-process-one__single">
-                            <div class="shape1"><img src="{{ asset('assets/img/shape/working-process-v1-shape1.png') }}" alt=""></div>
-                            <div class="working-process-one__single-top">
-                                <div class="icon">
-                                    <img src="{{ asset('assets/img/icon/working-process/step-1.png') }}" alt="">
-                                </div>
-                                <div class="text">
-                                    <h2>Step - 1</h2>
-                                </div>
-                            </div>
-                            <div class="working-process-one__single-content">
-                                <h2><a href="#">The Paperwork</a></h2>
-                                <p>Once you place your order via mail or fax our field staff will collect the documents
-                                    and
-                                    consignments from the shipper.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Working Process One Single-->
-
-                    <!--Start Working Process One Single-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <div class="working-process-one__single ml60">
-                            <div class="shape1"><img src="{{ asset('assets/img/shape/working-process-v1-shape1.png') }}" alt=""></div>
-                            <div class="working-process-one__single-top">
-                                <div class="icon">
-                                    <img src="{{ asset('assets/img/icon/working-process/step-2.png') }}" alt="">
-                                </div>
-                                <div class="text">
-                                    <h2>Step - 2</h2>
-                                </div>
-                            </div>
-                            <div class="working-process-one__single-content">
-                                <h2><a href="#">Select Location</a></h2>
-                                <p>We’ll evaluate the size and weight of your cargo, find just the right carrier to fly
-                                    your goods to their destination.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Working Process One Single-->
-
-                    <!--Start Working Process One Single-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInLeft" data-wow-delay="400ms" data-wow-duration="1500ms">
-                        <div class="working-process-one__single ml80">
-                            <div class="working-process-one__single-top">
-                                <div class="icon">
-                                    <img src="{{ asset('assets/img/icon/working-process/step-3.png') }}" alt="">
-                                </div>
-                                <div class="text">
-                                    <h2>Step - 3</h2>
-                                </div>
-                            </div>
-                            <div class="working-process-one__single-content">
-                                <h2><a href="#">Partners Till The End</a></h2>
-                                <p>Our teams will be working hard at every step of the journey to ensure that your
-                                    shipment is delivered on time.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Working Process One Single-->
-                </div>
-            </div>
-        </section>
-        <!--End Working Process One-->
-
-        <!--Start Cta One-->
-        <section class="cta-one">
-            <div class="container">
-                <div class="cta-one__inner">
-                    <div class="cta-one__shape1"><img src="{{ asset('assets/img/shape/cta-one__shape1.png') }}" alt=""></div>
-                    <div class="cta-one__shape2"><img src="{{ asset('assets/img/shape/cta-one__shape2.png') }}" alt=""></div>
-                    <div class="cta-one__shape3 float-bob-x">
-                        <img src="{{ asset('assets/img/shape/cta-one__shape5.png') }}" alt="#">
-                    </div>
-                    <div class="cta-one__inner-box">
-                        <div class="title-box">
-                            <h2>We are best transport agency for give best quality service</h2>
-                        </div>
-
-                        <div class="btn-box">
-                            <a class="thm-btn" href="#">
-                                <span class="txt">Request Services</span> <i class="icon-right-arrow"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--End Cta One-->
 
         <!--Start Choose Us One-->
         <section class="choose-us-one">
@@ -529,11 +272,10 @@
                                     <div class="icon-box">
                                         <span class="icon-global-network"></span>
                                     </div>
-                                    <h3><a href="#">Global Network</a></h3>
+                                    <h3><a href="#">Sustainable & <br>Eco-Conscious</a></h3>
                                 </div>
                                 <div class="text-box">
-                                    <p>Freight Consolidators connects your business with international hubs across the
-                                        world such as the USA.</p>
+                                    <p>Committed to responsible tourism, we support local communities and minimize environmental impact on every trip.</p>
                                 </div>
                             </div>
                         </div>
@@ -549,11 +291,10 @@
                                     <div class="icon-box">
                                         <span class="icon-right-time-delivery"></span>
                                     </div>
-                                    <h3><a href="#">Right Time Delivery</a></h3>
+                                    <h3><a href="#">Safety-First Approach</a></h3>
                                 </div>
                                 <div class="text-box">
-                                    <p>You place your order, and we’ll handle the rest. From pick-up to customs
-                                        clearance from tracking.</p>
+                                    <p>Every journey is backed by high-standard gear, travel insurance, and strict safety protocols to ensure your comfort and security.</p>
                                 </div>
                             </div>
                         </div>
@@ -569,11 +310,10 @@
                                     <div class="icon-box">
                                         <span class="icon-support"></span>
                                     </div>
-                                    <h3><a href="#">24-Hour Support</a></h3>
+                                    <h3><a href="#">Flexible Service</a></h3>
                                 </div>
                                 <div class="text-box">
-                                    <p>Our dedicated team is on the job, tracking every step of your shipment we’re
-                                        available 24/7 </p>
+                                    <p>Trips can be fully customized to your needs. Our team provides tailored recommendations for your perfect adventure.</p>
                                 </div>
                             </div>
                         </div>
@@ -589,11 +329,11 @@
                                     <div class="icon-box">
                                         <span class="icon-special-shipments"></span>
                                     </div>
-                                    <h3><a href="#">Special Shipments</a></h3>
+                                    <h3><a href="#">Local Expertise & Experience</a></h3>
                                 </div>
                                 <div class="text-box">
-                                    <p>If your goods have special movement, storage and handling requirements, we have
-                                        the expertise.</p>
+                                    <p>Our team consists of professional guides with years of experience in special interest tourism,
+                                        offering deep knowledge of exclusive destinations and the best routes.</p>
                                 </div>
                             </div>
                         </div>
@@ -609,11 +349,10 @@
                                     <div class="icon-box">
                                         <span class="icon-enter-product-details"></span>
                                     </div>
-                                    <h3><a href="#">Bespoke Solutions</a></h3>
+                                    <h3><a href="#">Unique & Tailored Adventures</a></h3>
                                 </div>
                                 <div class="text-box">
-                                    <p>We provide personalised intermodal solutions to all seaports and airports around
-                                        the world.</p>
+                                    <p>We design one-of-a-kind trips—from mountain expeditions to cultural immersions and extreme adventures—crafted for unforgettable experiences.</p>
                                 </div>
                             </div>
                         </div>
@@ -629,11 +368,10 @@
                                     <div class="icon-box">
                                         <span class="icon-esteemed-company"></span>
                                     </div>
-                                    <h3><a href="#">Esteemed Company</a></h3>
+                                    <h3><a href="#">Trusted by Adventurers</a></h3>
                                 </div>
                                 <div class="text-box">
-                                    <p>More than 4099 clients across the world have chosen us as their freight partner,
-                                        because of the competitive.</p>
+                                    <p>With hundreds of successful trips and glowing reviews, we’re proud to be a top choice for explorers.</p>
                                 </div>
                             </div>
                         </div>
@@ -709,10 +447,10 @@
         <!--End Fact Counter One-->
 
         <!--Start Project One-->
-        <section class="project-one">
-            <div class="project-one__bg" style="background-image: url('{{ asset('assets/img/bg/project-v1-bg.jpg') }}');"></div>
+        {{-- <section class="project-one">
+            <div class="project-one__bg" style="background-image: url('{{ asset('assets/img/bg/81956.jpg') }}');"></div>
             <div class="shape1"><img src="{{ asset('assets/img/shape/project-v1-shape1.png') }}" alt=""></div>
-            <div class="shape2"><img src="{{ asset('assets/img/shape/project-v1-shape2.png') }}" alt=""></div>
+            <div class="shape2"><img src="{{ asset('assets/img/shape/project-v1-shape3.png') }}" alt=""></div>
             <div class="container">
                 <div class="project-one__top">
                     <div class="sec-title">
@@ -906,389 +644,8 @@
                     <div class="swiper-pagination" id="project-one__pagination"></div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!--End Project One-->
-
-        <!--Start Request Services One-->
-        <section class="request-services-one">
-            <div class="request-services-one__bg" style="background-image: url('{{ asset('assets/img/background/request-services-v1-bg.jpg') }}');"></div>
-            <div class="shape1 float-bob-y"><img src="{{ asset('assets/img/shape/request-services-v1-shape1.png') }}" alt=""></div>
-            <div class="container">
-
-                <div class="request-services-one__top">
-                    <div class="sec-title">
-                        <div class="sub-title">
-                            <h5><span class="icon-right-arrow-1"></span> Request Services</h5>
-                        </div>
-                        <h2>Get a Free Freight Quote</h2>
-                    </div>
-
-                    <div class="text-box">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Quis ipsum gravida risus commodo viverra maecenas.</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <!--Start Request Services One Form-->
-                    <div class="col-xl-8">
-                        <div class="request-services-one__form-box">
-                            <div class="request-services-one__form-tab tabs-box">
-                                <ul class="tab-buttons clearfix list-unstyled">
-                                    <li data-tab="#quote" class="tab-btn active-btn"><span>Request A Quote</span></li>
-                                    <li data-tab="#track" class="tab-btn"><span>Track & Trace</span></li>
-                                </ul>
-
-                                <div class="tabs-content">
-                                    <!--Start Single Tab-->
-                                    <div class="tab" id="quote">
-                                        <div class="request-services-one__single-tab">
-                                            <form id="contact-form" class="default-form2 contact-form-validated request-services-one__form" action="assets/inc/sendemail.php" novalidate="novalidate">
-
-                                                <div class="request-services-one__form-top">
-                                                    <div class="title-box">
-                                                        <h3>General Information:</h3>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Full Name</label>
-                                                                <input type="text" name="name" value="" placeholder="Ronald Richards" required="">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Phone Number</label>
-                                                                <input type="text" placeholder="+1256 456 7890" name="phone">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Email Address</label>
-                                                                <input type="email" name="email" value="" placeholder="ronald@gmail.com" required="">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Freight Type</label>
-                                                                <div class="select-box">
-                                                                    <select class="selectmenu wide">
-                                                                        <option selected="selected">Air Freight</option>
-                                                                        <option>Air Freight</option>
-                                                                        <option>Air Freight</option>
-                                                                        <option>Air Freight</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Departure City</label>
-                                                                <input type="text" placeholder="New York" name="city">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Delivery City</label>
-                                                                <input type="text" placeholder="Las Angle" name="city2">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="request-services-one__form-bottom">
-                                                    <div class="title-box">
-                                                        <h3>Dimensions of Departure:</h3>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                                            <div class="input-box">
-                                                                <label>Incoterms</label>
-                                                                <div class="select-box">
-                                                                    <select class="selectmenu wide">
-                                                                        <option selected="selected">Value 1</option>
-                                                                        <option>Value 2</option>
-                                                                        <option>Value 3</option>
-                                                                        <option>Value 4</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                                            <div class="input-box">
-                                                                <label>Height</label>
-                                                                <input type="number" placeholder="3" name="height">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                                            <div class="input-box">
-                                                                <label>Width</label>
-                                                                <input type="number" placeholder="3" name="width">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                                            <div class="input-box">
-                                                                <label>Length</label>
-                                                                <input type="number" placeholder="4" name="length">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="request-services-one__form-bottom-tag">
-                                                        <div class="title">
-                                                            <h3>Extra services:</h3>
-                                                        </div>
-
-                                                        <div class="tag-box">
-                                                            <div class="single-tags">
-                                                                <input type="checkbox" name="express-delivery" id="tag_1">
-                                                                <label for="tag_1"><span></span>Express Delivery</label>
-                                                            </div>
-
-                                                            <div class="single-tags">
-                                                                <input type="checkbox" name="express-delivery" id="tag_2">
-                                                                <label for="tag_2"><span></span>Insurance</label>
-                                                            </div>
-
-                                                            <div class="single-tags">
-                                                                <input type="checkbox" name="express-delivery" id="tag_3">
-                                                                <label for="tag_3"><span></span>Packaging</label>
-                                                            </div>
-
-                                                            <div class="single-tags">
-                                                                <input type="checkbox" name="express-delivery" id="tag_4">
-                                                                <label for="tag_4"><span></span>Fragile</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-xl-6 col-lg-6 col-md-6">
-                                                        <div class="request-services-one__form-btn">
-                                                            <button class="thm-btn" type="submit" data-loading-text="Please wait...">
-                                                                <span class="txt">Submit Now</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <!--End Single Tab-->
-
-                                    <!--Start Single Tab-->
-                                    <div class="tab active-tab" id="track">
-                                        <div class="request-services-one__single-tab">
-                                            <form id="contact-form2" class="default-form2 contact-form-validated request-services-one__form" action="assets/inc/sendemail.php" novalidate="novalidate">
-
-                                                <div class="request-services-one__form-top">
-                                                    <div class="title-box">
-                                                        <h3>General Information:</h3>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Full Name</label>
-                                                                <input type="text" name="name" value="" placeholder="Ronald Richards" required="">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Phone Number</label>
-                                                                <input type="text" placeholder="+1256 456 7890" name="phone">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Email Address</label>
-                                                                <input type="email" name="email" value="" placeholder="ronald@gmail.com" required="">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Freight Type</label>
-                                                                <div class="select-box">
-                                                                    <select class="selectmenu wide">
-                                                                        <option selected="selected">Air Freight</option>
-                                                                        <option>Air Freight</option>
-                                                                        <option>Air Freight</option>
-                                                                        <option>Air Freight</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Departure City</label>
-                                                                <input type="text" placeholder="New York" name="city">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-4 col-lg-4 col-md-4">
-                                                            <div class="input-box">
-                                                                <label>Delivery City</label>
-                                                                <input type="text" placeholder="Las Angle" name="city2">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="request-services-one__form-bottom">
-                                                    <div class="title-box">
-                                                        <h3>Dimensions of Departure:</h3>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                                            <div class="input-box">
-                                                                <label>Incoterms</label>
-                                                                <div class="select-box">
-                                                                    <select class="selectmenu wide">
-                                                                        <option selected="selected">Value 1</option>
-                                                                        <option>Value 2</option>
-                                                                        <option>Value 3</option>
-                                                                        <option>Value 4</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                                            <div class="input-box">
-                                                                <label>Height</label>
-                                                                <input type="number" placeholder="3" name="height">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                                            <div class="input-box">
-                                                                <label>Width</label>
-                                                                <input type="number" placeholder="3" name="width">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                                            <div class="input-box">
-                                                                <label>Length</label>
-                                                                <input type="number" placeholder="4" name="length">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="request-services-one__form-bottom-tag">
-                                                        <div class="title">
-                                                            <h3>Extra services:</h3>
-                                                        </div>
-
-                                                        <div class="tag-box">
-                                                            <div class="single-tags">
-                                                                <input type="checkbox" name="express-delivery" id="tag_5">
-                                                                <label for="tag_5"><span></span>Express Delivery</label>
-                                                            </div>
-
-                                                            <div class="single-tags">
-                                                                <input type="checkbox" name="express-delivery" id="tag_6">
-                                                                <label for="tag_6"><span></span>Insurance</label>
-                                                            </div>
-
-                                                            <div class="single-tags">
-                                                                <input type="checkbox" name="express-delivery" id="tag_7">
-                                                                <label for="tag_7"><span></span>Packaging</label>
-                                                            </div>
-
-                                                            <div class="single-tags">
-                                                                <input type="checkbox" name="express-delivery" id="tag_8">
-                                                                <label for="tag_8"><span></span>Fragile</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-xl-6 col-lg-6 col-md-6">
-                                                        <div class="request-services-one__form-btn">
-                                                            <button class="thm-btn" type="submit" data-loading-text="Please wait...">
-                                                                <span class="txt">Submit Now</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <!--End Single Tab-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Request Services One Form-->
-
-                    <!--Start Request Services One Content-->
-                    <div class="col-xl-4">
-                        <div class="request-services-one__content">
-                            <div class="request-services-one__content-img">
-                                <div class="inner">
-                                    <img src="{{ asset('assets/img/resource/request-services-v1-img1.jpg') }}" alt="">
-                                    <div class="request-services-one__video">
-                                        <a href="https://www.youtube.com/watch?v=6mkoGSqTqFI" class="request-services-one__video-icon video-popup">
-                                            <span class="txt icon-play-button-arrowhead"></span>
-                                        </a>
-                                        <div class="title">
-                                            <h3><a href="#">Watch Now</a></h3>
-                                        </div>
-                                    </div>
-                                    <div class="text-box">
-                                        <h3>How to <br> Transport <br> your Product</h3>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <ul class="request-services-one__content-list">
-                                <li>
-                                    <div class="icon-box">
-                                        <span class="icon-global-network"></span>
-                                    </div>
-
-                                    <div class="text-box">
-                                        <h3>Fast Worldwide Delivery</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="icon-box">
-                                        <span class="icon-enter-product-details"></span>
-                                    </div>
-
-                                    <div class="text-box">
-                                        <h3>Safe And Secure Delivery</h3>
-                                        <p>Lorem ipsum dolor sit amet.</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!--End Request Services One Content-->
-                </div>
-            </div>
-        </section>
-        <!--End Request Services One-->
 
         <!--Start Testimonials One-->
         <section class="testimonials-one">
@@ -1508,7 +865,9 @@
 
         <!-- Start Team One-->
         <section class="team-one">
-            <div class="team-one__bg" style="background-image: url('{{ asset('assets/img/bg/team-v1-bg.jpg') }}');"></div>
+            <div class="team-one__bg" style="background-image: url('{{ asset('assets/img/bg/81956.jpg') }}');"></div>
+            <div class="shape1"><img src="{{ asset('assets/img/shape/project-v1-shape1.png') }}" alt=""></div>
+            <div class="shape2"><img src="{{ asset('assets/img/shape/project-v1-shape3.png') }}" alt=""></div>
             <div class="container">
                 <div class="team-one__top">
                     <div class="sec-title">
@@ -1605,7 +964,7 @@
             <div class="big-title">
                 <h2>faq</h2>
             </div>
-            <div class="faq-one__bg" style="background-image: url('{{ asset('assets/img/resource/faq-v1-bg.jpg') }}');"></div>
+            <div class="faq-one__bg" style="background-image: url('{{ asset('assets/img/bg/81956.jpg') }}');"></div>
             <div class="container">
                 <div class="row">
                     <!-- Start Faq One Faq-->
@@ -1794,19 +1153,21 @@
 
         <!-- Start Team One-->
         <section class="photo-one">
-            <div class="photo-one__bg" style="background-image: url('{{ asset('assets/img/bg/team-v1-bg.jpg') }}');"></div>
+            <div class="photo-one__bg" style="background-image: url('{{ asset('assets/img/bg/81956.jpg') }}');"></div>
+            <div class="shape1"><img src="{{ asset('assets/img/shape/project-v1-shape1.png') }}" alt=""></div>
+            <div class="shape2"><img src="{{ asset('assets/img/shape/project-v1-shape3.png') }}" alt=""></div>
             <div class="container">
                 <div class="photo-one__top">
                     <div class="sec-title">
                         <div class="sub-title">
-                            <h5><span class="icon-right-arrow-1"></span> Our Workers</h5>
+                            <h5><span class="icon-right-arrow-1"></span> Our Gallery</h5>
                         </div>
-                        <h2>Meet with expert photo</h2>
+                        <h2>Thrown away darling</h2>
                     </div>
 
                     <div class="btn-box">
                         <a class="thm-btn" href="/home/photo">
-                            <span class="txt">View All Member</span> <i class="icon-right-arrow"></i>
+                            <span class="txt">View All Gallery</span> <i class="icon-right-arrow"></i>
                         </a>
                     </div>
                 </div>
