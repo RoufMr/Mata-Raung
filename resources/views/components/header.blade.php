@@ -108,7 +108,7 @@
                                                         </div>
                                                         <div class="text-box">
                                                             <p>Address</p>
-                                                            <h4>Sukojati, Blimbingsari </h4>
+                                                            <h4><a href="{{route('home.contact')}}">Sukojati, Blimbingsari </a></h4>
                                                         </div>
                                                     </li>
 
@@ -208,7 +208,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="main-header-three__bottom-right">
+                                    {{-- <div class="main-header-three__bottom-right">
                                         <div class="search-box">
                                             <a href="#" class="main-menu__search search-toggler icon-magnifying-glass"></a>
                                         </div>
@@ -217,12 +217,12 @@
                                                 <span class="icon-menu"></span>
                                             </a>
                                         </div>
-                                        {{-- <div class="btn-box">
+                                        <div class="btn-box">
                                             <a class="thm-btn" href="#">
                                                 <span class="txt">Get Free Quote</span>
                                             </a>
-                                        </div> --}}
-                                    </div>
+                                        </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
@@ -235,7 +235,7 @@
                 <nav class="menu-box">
                     <div class="close-btn"><i class="fas fa-times"></i></div>
                     <div class="nav-logo">
-                        <a href="/"><img src="{{ asset('assets/img/resource/mobile-menu-logo2.png') }}" alt="Logo"></a>
+                        <a href="/"><img src="{{ asset('assets/img/resource/logo-mr-nobg2.png') }}" alt="Logo"></a>
                     </div>
                     <div class="menu-outer">
                         <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->

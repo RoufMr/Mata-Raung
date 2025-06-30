@@ -639,7 +639,7 @@ const menuItems = document.querySelectorAll('.menu-item-has-children');
 menuItems.forEach(item => {
     // Get all 'a' elements inside the current 'li'
     const links = item.querySelectorAll('ul.sub-menu li a');
-    
+
     // Loop through each 'a' element
     links.forEach(link => {
         // Check if the href attribute matches the current URL
@@ -677,7 +677,7 @@ sidebarLinks.forEach(link => {
     if (link.href === currentUrl) {
         // Remove 'active' class from any other links
         sidebarLinks.forEach(link => link.classList.remove('active'));
-        
+
         // Add the 'active' class to the matching link
         link.classList.add('active');
     }
@@ -688,7 +688,7 @@ sidebarLinks.forEach(link => {
 // ============================
 document.addEventListener('DOMContentLoaded', function() {
     const titles = document.querySelectorAll('.photo-three__single-content h3');
-    
+
     titles.forEach(title => {
         const textLength = title.textContent.length;
         let fontSize = 20; // Default
@@ -707,12 +707,36 @@ document.addEventListener('DOMContentLoaded', function() {
         title.style.lineHeight = lineHeight; // Tanpa unit (relatif)
     });
 });
+
 document.addEventListener('DOMContentLoaded', function() {
     const titles = document.querySelectorAll('.photo-one__single-content h3');
-    
+
     titles.forEach(title => {
         const textLength = title.textContent.length;
         let fontSize = 20; // Default
+        let lineHeight = 1.2; // Sesuaikan dengan kebutuhan
+
+        // Atur ukuran font berdasarkan panjang teks
+        if (textLength > 20) fontSize = 18;
+        if (textLength > 30) fontSize = 16;
+        if (textLength > 40) fontSize = 14;
+        if (textLength > 50) fontSize = 12;
+
+        // Perkecil line-height jika font kecil
+        if (fontSize <= 14) lineHeight = 1.1;
+
+        title.style.fontSize = fontSize + 'px';
+        title.style.lineHeight = lineHeight; // Tanpa unit (relatif)
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Selector yang lebih spesifik - hanya h2 di dalam contact-list
+    const titles = document.querySelectorAll('.contact-page__contact-list h2');
+
+    titles.forEach(title => {
+        const textLength = title.textContent.length;
+        let fontSize = 24; // Default
         let lineHeight = 1.2; // Sesuaikan dengan kebutuhan
 
         // Atur ukuran font berdasarkan panjang teks

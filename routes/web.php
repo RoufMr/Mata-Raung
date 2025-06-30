@@ -31,7 +31,7 @@ use App\Http\Controllers\Auth\SocialiteController;
 
         Route::get('/blog/standard', 'blog_standard')->name('blogStandard');
 
-        Route::get('/contact', 'contact');
+        Route::get('/contact', 'contact')->name('home.contact');
 
         Route::get('/services', 'services')->name('services');
         Route::get('/air-transport', 'airTransport')->name('airTransport');

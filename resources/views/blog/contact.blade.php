@@ -17,6 +17,7 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
                 <div class="row">
                     <!--Start Contact Page Contact Info-->
                     <div class="col-xl-6">
+                        @foreach($abouts as $about)
 
                             <div class="contact-page__contact-info">
                                 <div class="sec-title-style3">
@@ -41,7 +42,7 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
 
                                                 <div class="text-box">
                                                     <p>Call Us Toll Free</p>
-                                                    <h2><a href="tel:123456789">+123 556 8824</a></h2>
+                                                    <h2><a href="https://wa.me/{{ $about->telepon}}">{{ $about->telepon }}</a></h2>
                                                 </div>
                                             </li>
 
@@ -52,7 +53,7 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
 
                                                 <div class="text-box">
                                                     <p>London Office</p>
-                                                    <h2>4517 Washington Ave. <br> Manchester</h2>
+                                                    <h2>{{ $about->alamat }}</h2>
                                                 </div>
                                             </li>
 
@@ -63,7 +64,7 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
 
                                                 <div class="text-box">
                                                     <p>Email Us</p>
-                                                    <h2><a href="mailto:yourmail@email.com">translo@Support.com</a></h2>
+                                                    <h2><a href="mailto:yourmail@email.com">{{ $about->email }}</a></h2>
                                                 </div>
                                             </li>
 
@@ -74,8 +75,7 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
 
                                                 <div class="text-box">
                                                     <p>Opening Time</p>
-                                                    <h2>Thursday - Saturday <br>
-                                                        10am : 08pm</h2>
+                                                    <h2>{{ $about->waktu_layanan }}</h2>
                                                 </div>
                                             </li>
                                         </ul>
@@ -83,14 +83,15 @@ $script='<script src="' . asset('assets/vendor/TweenMax.min.js') . '"></script>'
 
                                     <!-- Social links on the right -->
                                     <div class="contact-page_social-links">
-                                        <a href=""><span class="icon-facebook"></span></a>
-                                        <a href=""><span class="fab fa-tiktok"></span></a>
-                                        <a href=""><span class="icon-instagram"></span></a>
-                                        <a href=""><span class="fab fa-youtube"></span></a>
+                                        <a href="{{ $about->facebook }}"><span class="icon-facebook"></span></a>
+                                        <a href="{{ $about->tiktok }}"><span class="fab fa-tiktok"></span></a>
+                                        <a href="{{ $about->instagram }}"><span class="icon-instagram"></span></a>
+                                        <a href="{{ $about->youtube }}"><span class="fab fa-youtube"></span></a>
                                     </div>
                                 </div>
                             </div>
 
+                        @endforeach
                     </div>
                     <!--End Contact Page Contact Info-->
 

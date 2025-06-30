@@ -22,6 +22,14 @@ return new class extends Migration
             $table->text('deskripsi2');
             $table->text('visi');
             $table->text('misi');
+            $table->string('telepon')->nullable();
+            $table->text('alamat')->nullable();
+            $table->string('email')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('youtube')->nullable();
+            $table->string('tiktok')->nullable();
+            $table->string('facebook')->nullable();
+            $table->text('waktu_layanan')->nullable();
             $table->timestamps();
         });
     }

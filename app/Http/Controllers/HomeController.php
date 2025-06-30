@@ -102,12 +102,6 @@ class HomeController extends Controller
     {
         return view('services/warehousing');
     }
-        public function contact()
-    {
-        return view('blog.contact', [
-            // 'artikels' => Blog::where('status', true)->orderBy('id', 'desc')->get(),
-        ]);
-    }
 
     public function detail_team($slug)
     {
@@ -139,5 +133,12 @@ class HomeController extends Controller
         return view('services.about', [
             'abouts' => About::all()
             ]);
+    }
+
+    public function contact()
+    {
+        return view('blog.contact', [
+            'abouts' => About::all()
+        ]);
     }
 }

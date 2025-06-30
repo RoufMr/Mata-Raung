@@ -7,8 +7,8 @@
                         <div class="card tryal-gradient">
                             <div class="card-body tryal row">
                                 <div class="col-xl-7 col-sm-6">
-                                    <h2>Selamat Datang, 
-                                        
+                                    <h2>Selamat Datang,
+
                                     </h2>
                                     <span>Terus pantau kegiatan penerimaan mahasiswa baru politeknik enjinering
                                         indorama</span>
@@ -22,10 +22,10 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
-        
+           
         </div>
     </div>
 </div>

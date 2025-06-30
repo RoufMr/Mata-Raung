@@ -206,7 +206,7 @@
 .single-footer-widget .title {
     position: relative;
     display: block;
-    margin-top: -8px;
+    margin: -8px 18px 20px;
 }
 
 .single-footer-widget .title h2 {
@@ -218,9 +218,10 @@
 
 .footer-widget__about {
     position: relative;
-    display: block;
-    max-width: 330px;
+    display: flex;
+    /* max-width: 330px; */
     width: 100%;
+    justify-content: center;
 }
 
 .footer-widget__logo {

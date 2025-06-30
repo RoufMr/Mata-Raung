@@ -36,6 +36,14 @@ class AboutController extends Controller
             'deskripsi2' => 'required|min:20',
             'visi' => 'required|min:20',
             'misi' => 'required|min:20',
+            'telepon' => 'nullable|string',
+            'alamat' => 'nullable|string',
+            'email' => 'nullable|email',
+            'instagram' => 'nullable|url',
+            'youtube' => 'nullable|url',
+            'tiktok' => 'nullable|url',
+            'facebook' => 'nullable|url',
+            'waktu_layanan' => 'nullable|string',
         ];
 
         $messages = [
@@ -53,6 +61,11 @@ class AboutController extends Controller
             'visi.min' => 'Visi harus minimal 20 karakter!',
             'misi.required' => 'Misi wajib diisi!',
             'misi.min' => 'Misi harus minimal 20 karakter!',
+            'email.email' => 'Format email tidak valid',
+            'instagram.url' => 'Link Instagram harus berupa URL valid',
+            'youtube.url' => 'Link YouTube harus berupa URL valid',
+            'tiktok.url' => 'Link TikTok harus berupa URL valid',
+            'facebook.url' => 'Link Facebook harus berupa URL valid',
         ];
 
         $validatedData = $request->validate($rules, $messages);

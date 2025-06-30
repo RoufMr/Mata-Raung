@@ -169,17 +169,18 @@
                         <div class="about-one__img clearfix">
                             <div class="shape1 float-bob-x"><img src="{{ asset('asset/img/shape/about-v1-shape1.png') }}" alt="">
                             </div>
-                            <div class="inner clearfix">
-                                <img class="float-bob-y" src="{{ asset('storage/about/' . $about->image1) }}" alt="">
+                            <div class="inner clearfix"><a class="photo-home-popup gallery-item" href="{{ asset('storage/about/'.$about->image1) }}" title="">
+                                <img class="photo-home-popup float-bob-y" src="{{ asset('storage/about/' . $about->image1) }}" alt="">
+                            </a>
                             </div>
-                            <div class="btn-box">
+                            {{-- <div class="btn-box">
                                 <div class="round-text">
                                     <div class="curved-circle rotate-me">
                                         Mata Raung Indonesia - Since 2020 -
                                     </div>
                                     <a href="{{route('detail_about')}}">Read <br>More</a>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
 
                     </div>
@@ -963,7 +964,7 @@
             <div class="big-title">
                 <h2>faq</h2>
             </div>
-            <div class="faq-one__bg" style="background-image: url('{{ asset('assets/img/resource/faq-v1-bg.jpg') }}');"></div>
+            <div class="faq-one__bg" style="background-image: url('{{ asset('assets/img/bg/81956.jpg') }}');"></div>
             <div class="container">
                 <div class="row">
                     <!-- Start Faq One Faq-->

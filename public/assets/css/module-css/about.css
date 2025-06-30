@@ -37,17 +37,19 @@
 
 .about-one__img .inner {
     width: 100%;
-    height: 500px; /* Sesuaikan tinggi sesuai desain kamu */
-    overflow: hidden;
+    height: 500px;
+    /* overflow: hidden; */
     position: relative;
-    border-radius: 10px; /* Opsional */
+    display: flex;
+    border-radius: 10px;
     z-index: 1;
+    justify-content: center;
 }
 
 .about-one__img .inner img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
     object-position: center;
 }

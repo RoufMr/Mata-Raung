@@ -20,6 +20,7 @@
                                 <a href="/"><img src="{{ asset('assets/img/resource/logo_nonbg.png') }}" width="300px" alt=""></a>
                             </div> --}}
                             <div class="footer-widget__about-inner">
+                                {{-- @foreach($abouts as $about) --}}
                                 <div class="footer-widget__contact-box">
                                     <ul>
                                         <li>
@@ -29,7 +30,9 @@
 
                                             <div class="content-box">
                                                 <p>Address</p>
-                                                <h4>Sukojati, Blimbingsari, Banyuwangi</h4>
+                                                <h4><a href="{{route('home.contact')}}">
+                                                    Jl. H. Arifin, Dusun Krajan, Sukojati, Kec. Kabat, Kabupaten Banyuwangi, Jawa Timur 68461
+                                                </a></h4>
                                             </div>
                                         </li>
 
@@ -57,13 +60,60 @@
                                         </li>
                                     </ul>
                                 </div>
+                                {{-- @endforeach --}}
                             </div>
                         </div>
                     </div>
                     <!--End Single Footer Widget-->
 
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".1s">
+                        <div class="single-footer-widget footer-widget__about">
+                            {{-- <div class="logo-box">
+                                <a href="/"><img src="{{ asset('assets/img/resource/logo_nonbg.png') }}" width="300px" alt=""></a>
+                            </div> --}}
+                            <div class="footer-widget__about-inner">
+                                {{-- @foreach($abouts as $about) --}}
+                                <div class="footer-widget__contact-box">
+                                    <div class="title">
+                                        <h2>Quick Links</h2>
+                                    </div>
+                                  <ul>
+                                    <li>
+                                        <div class="content-box">
+                                            {{-- <p>Phone</p> --}}
+                                            <h4><a href="{{ route('detail_about') }}">About</a></h4>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="content-box">
+                                            {{-- <p>Phone</p> --}}
+                                            <h4><a href="{{ route('home.team') }}">Meet The Team</a></h4>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="content-box">
+                                            {{-- <p>Phone</p> --}}
+                                            <h4><a href="{{ route('home.blog') }}">All Blogs</a></h4>
+                                        </div>
+                                    </li><li>
+                                        <div class="content-box">
+                                            {{-- <p>Phone</p> --}}
+                                            <h4><a href="{{ route('home.photo') }}">All Gallery</a></h4>
+                                        </div>
+                                    </li><li>
+                                        <div class="content-box">
+                                            {{-- <p>Phone</p> --}}
+                                            <h4><a href="{{ route('services') }}">Services</a></h4>
+                                        </div>
+                                    </li>
+                                </ul>
+                                </div>
+                                {{-- @endforeach --}}
+                            </div>
+                        </div>
+                    </div>
                     <!--Start Single Footer Widget-->
-                    <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                    {{-- <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".2s">
                         <div class="single-footer-widget footer-widget__links">
                             <div class="title">
                                 <h2>Quick Links</h2>
@@ -71,20 +121,19 @@
 
                             <div class="footer-widget__links-box">
                                 <ul>
-                                    <li><a href="{{ route('detail_about') }}">Mission & Vision</a></li>
-                                    <li><a href="{{ route('detail_about') }}">Get Pricing Plan</a></li>
-                                    <li><a href="{{ route('detail_about') }}">Meet The Team</a></li>
-                                    <li><a href="{{ route('detail_about') }}">Our Clients</a></li>
-                                    <li><a href="{{ route('detail_about') }}">Available Positions</a></li>
-                                    <li><a href="{{ route('detail_about') }}">Job Application</a></li>
+                                    <li><a href="{{ route('detail_about') }}">About</a></li>
+                                    <li><a href="{{ route('home.team') }}">Meet The Team</a></li>
+                                    <li><a href="{{ route('home.blog') }}">All Blogs</a></li>
+                                    <li><a href="{{ route('home.photo') }}">All Gallery</a></li>
+                                    <li><a href="{{ route('services') }}">Services</a></li>
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <!--End Single Footer Widget-->
 
                     <!--Start Single Footer Widget-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    {{-- <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                         <div class="single-footer-widget footer-widget__links services">
                             <div class="title">
                                 <h2>Our Services</h2>
@@ -101,7 +150,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <!--End Single Footer Widget-->
 
                     <!--Start Single Footer Widget-->
@@ -144,10 +193,12 @@
                     <p>© 2025 <a href="/">Mata Raung,</a> All Rights Reserved.</p>
                 </div>
                 <div class="social-links">
-                    <a href="#"><span class="icon-facebook"></span></a>
-                    <a href="#"><span class="icon-twitter"></span></a>
-                    <a href="#"><span class="icon-instagram"></span></a>
-                    <a href="#"><span class="icon-linkedin"></span></a>
+                    <a href=""><span class="fab fa-facebook"></span></a>
+                    <a href="https://www.instagram.com/mataraung?igsh=MTJpaXMwdzE4MDhlaQ=="><span class="fab fa-instagram"></span></a>
+                    <a href="https://www.tiktok.com/@mataraung?lang=id-ID&is_from_webapp=1&sender_device=mobile&sender_web_id=7510456609338148370">
+                    <span class="fab fa-tiktok"></span>
+                    </a>
+                    <a href=""><span class="fab fa-youtube"></span></a>
                 </div>
                 <div class="copyright-menu">
                     <ul>
